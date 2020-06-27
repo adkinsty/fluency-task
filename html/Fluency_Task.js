@@ -61,8 +61,6 @@ psychoJS.start({
   expInfo: expInfo,
   });
 
-
-var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
@@ -82,40 +80,6 @@ function updateInfo() {
   return Scheduler.Event.NEXT;
 }
 
-
-var InstructionsClock;
-var instructions;
-var spacebar0;
-var thisExp;
-var win;
-var event;
-var shuffle;
-var TrialClock;
-var fixation;
-var timer;
-var instruct_text;
-var letter_text;
-var screen_text;
-var list_text1;
-var list_text2;
-var list_text3;
-var list_text4;
-var list_text5;
-var allLetters;
-var DifficultyClock;
-var fixation_1;
-var difficulty_question;
-var options;
-var anchor_1;
-var anchor_2;
-var key_resp_diff;
-var StrategyClock;
-var text_other;
-var text;
-var EndClock;
-var thank_you;
-var globalClock;
-var routineTimer;
 function experimentInit() {
   // Initialize components for Routine "Instructions"
   InstructionsClock = new util.Clock();
@@ -354,9 +318,6 @@ function experimentInit() {
   return Scheduler.Event.NEXT;
 }
 
-
-var instructions_loop;
-var currentLoop;
 function instructions_loopLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   instructions_loop = new TrialHandler({
@@ -382,15 +343,12 @@ function instructions_loopLoopBegin(thisScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function instructions_loopLoopEnd() {
   psychoJS.experiment.removeLoop(instructions_loop);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var trials;
 function trialsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials = new TrialHandler({
@@ -422,18 +380,12 @@ function trialsLoopBegin(thisScheduler) {
   return Scheduler.Event.NEXT;
 }
 
-
 function trialsLoopEnd() {
   psychoJS.experiment.removeLoop(trials);
 
   return Scheduler.Event.NEXT;
 }
 
-
-var t;
-var frameN;
-var _spacebar0_allKeys;
-var InstructionsComponents;
 function InstructionsRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'Instructions'-------
@@ -458,8 +410,6 @@ function InstructionsRoutineBegin(trials) {
   };
 }
 
-
-var continueRoutine;
 function InstructionsRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'Instructions'-------
@@ -528,7 +478,6 @@ function InstructionsRoutineEachFrame(trials) {
   };
 }
 
-
 function InstructionsRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'Instructions'-------
@@ -544,20 +493,13 @@ function InstructionsRoutineEnd(trials) {
   };
 }
 
-
-var textFill;
-var textController;
-var textIndex;
-var entryCount;
-var words_rt;
-var TrialComponents;
 function TrialRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'Trial'-------
     t = 0;
     TrialClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(11.000000);
+    routineTimer.add(61.000000);
     // update component parameters for each repeat
     letter_text.setText(Category);
     event.clearEvents();
@@ -600,10 +542,6 @@ function TrialRoutineBegin(trials) {
   };
 }
 
-
-var frameRemains;
-var _pj;
-var keys;
 function TrialRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'Trial'-------
@@ -636,13 +574,13 @@ function TrialRoutineEachFrame(trials) {
       timer.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (timer.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       timer.setAutoDraw(false);
     }
     
     if (timer.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      timer.setText(str(round(routineTimer.getTime())));
+      timer.setText(timerText);
     }
     
     // *instruct_text* updates
@@ -654,7 +592,7 @@ function TrialRoutineEachFrame(trials) {
       instruct_text.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (instruct_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       instruct_text.setAutoDraw(false);
     }
@@ -668,7 +606,7 @@ function TrialRoutineEachFrame(trials) {
       letter_text.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (letter_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       letter_text.setAutoDraw(false);
     }
@@ -682,7 +620,7 @@ function TrialRoutineEachFrame(trials) {
       screen_text.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (screen_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       screen_text.setAutoDraw(false);
     }
@@ -696,7 +634,7 @@ function TrialRoutineEachFrame(trials) {
       list_text1.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (list_text1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text1.setAutoDraw(false);
     }
@@ -710,7 +648,7 @@ function TrialRoutineEachFrame(trials) {
       list_text2.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (list_text2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text2.setAutoDraw(false);
     }
@@ -724,7 +662,7 @@ function TrialRoutineEachFrame(trials) {
       list_text3.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (list_text3.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text3.setAutoDraw(false);
     }
@@ -738,7 +676,7 @@ function TrialRoutineEachFrame(trials) {
       list_text4.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (list_text4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text4.setAutoDraw(false);
     }
@@ -752,10 +690,11 @@ function TrialRoutineEachFrame(trials) {
       list_text5.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (list_text5.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text5.setAutoDraw(false);
     }
+    timerText= Math.round(routineTimer.getTime()).toString() 
     var _pj;
     function _pj_snippets(container) {
         function in_es6(left, right) {
@@ -843,10 +782,6 @@ function TrialRoutineEachFrame(trials) {
   };
 }
 
-
-var word_strings;
-var all_words;
-var num;
 function TrialRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'Trial'-------
@@ -880,9 +815,6 @@ function TrialRoutineEnd(trials) {
   };
 }
 
-
-var _key_resp_diff_allKeys;
-var DifficultyComponents;
 function DifficultyRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'Difficulty'-------
@@ -909,7 +841,6 @@ function DifficultyRoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
-
 
 function DifficultyRoutineEachFrame(trials) {
   return function () {
@@ -1023,7 +954,6 @@ function DifficultyRoutineEachFrame(trials) {
   };
 }
 
-
 function DifficultyRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'Difficulty'-------
@@ -1046,9 +976,6 @@ function DifficultyRoutineEnd(trials) {
   };
 }
 
-
-var modify;
-var StrategyComponents;
 function StrategyRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'Strategy'-------
@@ -1056,19 +983,12 @@ function StrategyRoutineBegin(trials) {
     StrategyClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
+    psychoJS.eventManager.clearEvents()
     
-            // add-on: list(s: string): string[]
-            function list(s) {
-                // if s is a string, we return a list of its characters
-                if (typeof s === 'string')
-                    return s.split('');
-                else
-                    // otherwise we return s:
-                    return s;
-            }
-            
-            event.clearEvents();
-    allLetters = list(string.ascii_lowercase);
+    
+    allLetters = "abcdefghijklmnopqrstuvwxyz".split('');
+    
+    
     modify = false;
     text.text = "";
     
@@ -1084,7 +1004,6 @@ function StrategyRoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
-
 
 function StrategyRoutineEachFrame(trials) {
   return function () {
@@ -1114,61 +1033,32 @@ function StrategyRoutineEachFrame(trials) {
       text.setAutoDraw(true);
     }
 
-    var _pj;
-    function _pj_snippets(container) {
-        function in_es6(left, right) {
-            if (((right instanceof Array) || ((typeof right) === "string"))) {
-                return (right.indexOf(left) > (- 1));
+    keys = psychoJS.eventManager.getKeys();
+    if (keys.indexOf('escape') > -1) {
+        psychoJS.experiment.experimentEnded = true;
+    } else {
+        if (keys) {
+            if ((keys[0] === "space")) {
+                textFill += " ";
             } else {
-                if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {
-                    return right.has(left);
-                } else {
-                    return (left in right);
-                }
-            }
-        }
-        container["in_es6"] = in_es6;
-        return container;
-    }
-    _pj = {};
-    _pj_snippets(_pj);
-    keys = event.getKeys();
-    if (keys.length) {
-        if (_pj.in_es6("space", keys)) {
-            text.text = (text.text + " ");
-        } else {
-            if (_pj.in_es6("backspace", keys)) {
-                text.text = text.text.slice(0, (- 1));
-            } else {
-                if (_pj.in_es6("comma", keys)) {
-                    text.text = (text.text + ",");
-                } else {
-                    if (_pj.in_es6("period", keys)) {
-                        text.text = (text.text + ".");
+                if ((keys[0] === "return")) {
+                    continueRoutine = false;
                     } else {
-                        if ((_pj.in_es6("lshift", keys) || _pj.in_es6("rshift", keys))) {
-                            modify = true;
-                        } else {
-                            if (_pj.in_es6("return", keys)) {
-                                continueRoutine = false;
+                        if ((keys[0] === "period")) {
+                            textFill += "."
                             } else {
-                                if (_pj.in_es6("escape", keys)) {
-                                    core.quit();
-                                } else {
-                                    if (modify) {
-                                        text.text = (text.text + keys[0].upper());
-                                        modify = false;
-                                    } else {
-                                        text.text = (text.text + keys[0]);
-                                    }
-                                }
-                            }
+                        if ((keys[0] === "comma")) {
+                            textFill += ","
+                } else {
+                    if ((keys[0] === "backspace")) {
+                        textFill = textFill.slice(0, (- 1));
+                    } else {
+                        if (allLetters.indexOf(keys[0]) > -1) {
+                            textFill += keys[0];
                         }
                     }
                 }
             }
-        }
-    }
     
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
@@ -1196,7 +1086,6 @@ function StrategyRoutineEachFrame(trials) {
   };
 }
 
-
 function StrategyRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'Strategy'-------
@@ -1205,7 +1094,9 @@ function StrategyRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
+    
     thisExp.addData("Strategy_resp", text.text);
+    
     
     // the Routine "Strategy" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -1214,8 +1105,6 @@ function StrategyRoutineEnd(trials) {
   };
 }
 
-
-var EndComponents;
 function EndRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'End'-------
@@ -1235,7 +1124,6 @@ function EndRoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
-
 
 function EndRoutineEachFrame(trials) {
   return function () {
@@ -1285,7 +1173,6 @@ function EndRoutineEachFrame(trials) {
   };
 }
 
-
 function EndRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'End'-------
@@ -1297,7 +1184,6 @@ function EndRoutineEnd(trials) {
     return Scheduler.Event.NEXT;
   };
 }
-
 
 function endLoopIteration(thisScheduler, loop) {
   // ------Prepare for next entry------
@@ -1321,14 +1207,12 @@ function endLoopIteration(thisScheduler, loop) {
   };
 }
 
-
 function importConditions(trials) {
   return function () {
     psychoJS.importAttributes(trials.getCurrentTrial());
     return Scheduler.Event.NEXT;
     };
 }
-
 
 function quitPsychoJS(message, isCompleted) {
   // Check for and save orphaned data

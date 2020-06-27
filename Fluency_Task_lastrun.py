@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.2),
-    on Sat Jun 27 13:49:35 2020
+    on Sat Jun 27 15:33:09 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/canfenerci/Dropbox/IMMEM/Summer_2020/Fluency_Task_2/Fluency_Task_lastrun.py',
+    originPath='/Users/canfenerci/Dropbox/My Mac (sheldonmemorylab2s-iMac.local)/Desktop/Fluency Task/Fluency_Task_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -367,7 +367,7 @@ for thisTrial in trials:
     
     # ------Prepare to start Routine "Trial"-------
     continueRoutine = True
-    routineTimer.add(11.000000)
+    routineTimer.add(61.000000)
     # update component parameters for each repeat
     letter_text.setText(Category)
     # make sure no previous keypresses are used in the word
@@ -450,14 +450,14 @@ for thisTrial in trials:
             timer.setAutoDraw(True)
         if timer.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > timer.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > timer.tStartRefresh + 60-frameTolerance:
                 # keep track of stop time/frame for later
                 timer.tStop = t  # not accounting for scr refresh
                 timer.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(timer, 'tStopRefresh')  # time at next scr refresh
                 timer.setAutoDraw(False)
         if timer.status == STARTED:  # only update if drawing
-            timer.setText(str(round(routineTimer.getTime())) , log=False)
+            timer.setText(timerText, log=False)
         
         # *instruct_text* updates
         if instruct_text.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
@@ -469,7 +469,7 @@ for thisTrial in trials:
             instruct_text.setAutoDraw(True)
         if instruct_text.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > instruct_text.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > instruct_text.tStartRefresh + 60-frameTolerance:
                 # keep track of stop time/frame for later
                 instruct_text.tStop = t  # not accounting for scr refresh
                 instruct_text.frameNStop = frameN  # exact frame index
@@ -486,7 +486,7 @@ for thisTrial in trials:
             letter_text.setAutoDraw(True)
         if letter_text.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > letter_text.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > letter_text.tStartRefresh + 60-frameTolerance:
                 # keep track of stop time/frame for later
                 letter_text.tStop = t  # not accounting for scr refresh
                 letter_text.frameNStop = frameN  # exact frame index
@@ -503,7 +503,7 @@ for thisTrial in trials:
             screen_text.setAutoDraw(True)
         if screen_text.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > screen_text.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > screen_text.tStartRefresh + 60-frameTolerance:
                 # keep track of stop time/frame for later
                 screen_text.tStop = t  # not accounting for scr refresh
                 screen_text.frameNStop = frameN  # exact frame index
@@ -520,7 +520,7 @@ for thisTrial in trials:
             list_text1.setAutoDraw(True)
         if list_text1.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > list_text1.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > list_text1.tStartRefresh + 60-frameTolerance:
                 # keep track of stop time/frame for later
                 list_text1.tStop = t  # not accounting for scr refresh
                 list_text1.frameNStop = frameN  # exact frame index
@@ -537,7 +537,7 @@ for thisTrial in trials:
             list_text2.setAutoDraw(True)
         if list_text2.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > list_text2.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > list_text2.tStartRefresh + 60-frameTolerance:
                 # keep track of stop time/frame for later
                 list_text2.tStop = t  # not accounting for scr refresh
                 list_text2.frameNStop = frameN  # exact frame index
@@ -554,7 +554,7 @@ for thisTrial in trials:
             list_text3.setAutoDraw(True)
         if list_text3.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > list_text3.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > list_text3.tStartRefresh + 60-frameTolerance:
                 # keep track of stop time/frame for later
                 list_text3.tStop = t  # not accounting for scr refresh
                 list_text3.frameNStop = frameN  # exact frame index
@@ -571,7 +571,7 @@ for thisTrial in trials:
             list_text4.setAutoDraw(True)
         if list_text4.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > list_text4.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > list_text4.tStartRefresh + 60-frameTolerance:
                 # keep track of stop time/frame for later
                 list_text4.tStop = t  # not accounting for scr refresh
                 list_text4.frameNStop = frameN  # exact frame index
@@ -588,12 +588,13 @@ for thisTrial in trials:
             list_text5.setAutoDraw(True)
         if list_text5.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > list_text5.tStartRefresh + 10-frameTolerance:
+            if tThisFlipGlobal > list_text5.tStartRefresh + 60-frameTolerance:
                 # keep track of stop time/frame for later
                 list_text5.tStop = t  # not accounting for scr refresh
                 list_text5.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(list_text5, 'tStopRefresh')  # time at next scr refresh
                 list_text5.setAutoDraw(False)
+        timerText= str(round(routineTimer.getTime())) 
         keys = event.getKeys()
         t = TrialClock.getTime()
         if 'escape' in keys:
@@ -648,26 +649,6 @@ for thisTrial in trials:
     for thisComponent in TrialComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    trials.addData('fixation.started', fixation.tStartRefresh)
-    trials.addData('fixation.stopped', fixation.tStopRefresh)
-    trials.addData('timer.started', timer.tStartRefresh)
-    trials.addData('timer.stopped', timer.tStopRefresh)
-    trials.addData('instruct_text.started', instruct_text.tStartRefresh)
-    trials.addData('instruct_text.stopped', instruct_text.tStopRefresh)
-    trials.addData('letter_text.started', letter_text.tStartRefresh)
-    trials.addData('letter_text.stopped', letter_text.tStopRefresh)
-    trials.addData('screen_text.started', screen_text.tStartRefresh)
-    trials.addData('screen_text.stopped', screen_text.tStopRefresh)
-    trials.addData('list_text1.started', list_text1.tStartRefresh)
-    trials.addData('list_text1.stopped', list_text1.tStopRefresh)
-    trials.addData('list_text2.started', list_text2.tStartRefresh)
-    trials.addData('list_text2.stopped', list_text2.tStopRefresh)
-    trials.addData('list_text3.started', list_text3.tStartRefresh)
-    trials.addData('list_text3.stopped', list_text3.tStopRefresh)
-    trials.addData('list_text4.started', list_text4.tStartRefresh)
-    trials.addData('list_text4.stopped', list_text4.tStopRefresh)
-    trials.addData('list_text5.started', list_text5.tStartRefresh)
-    trials.addData('list_text5.stopped', list_text5.tStopRefresh)
     word_strings = [list_text1, list_text2, list_text3, list_text4, list_text5]
     all_words = []
     for this_word_string in word_strings:
@@ -810,16 +791,6 @@ for thisTrial in trials:
     for thisComponent in DifficultyComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    trials.addData('fixation_1.started', fixation_1.tStartRefresh)
-    trials.addData('fixation_1.stopped', fixation_1.tStopRefresh)
-    trials.addData('difficulty_question.started', difficulty_question.tStartRefresh)
-    trials.addData('difficulty_question.stopped', difficulty_question.tStopRefresh)
-    trials.addData('options.started', options.tStartRefresh)
-    trials.addData('options.stopped', options.tStopRefresh)
-    trials.addData('anchor_1.started', anchor_1.tStartRefresh)
-    trials.addData('anchor_1.stopped', anchor_1.tStopRefresh)
-    trials.addData('anchor_2.started', anchor_2.tStartRefresh)
-    trials.addData('anchor_2.stopped', anchor_2.tStopRefresh)
     # check responses
     if key_resp_diff.keys in ['', [], None]:  # No response was made
         key_resp_diff.keys = None
@@ -837,6 +808,7 @@ for thisTrial in trials:
     # make sure no previous keypresses are used in the word
     event.clearEvents()
     
+    import string
     allLetters = list(string.ascii_lowercase) #makes a list of alphabet characters
     
     modify = False
@@ -928,11 +900,9 @@ for thisTrial in trials:
     for thisComponent in StrategyComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    trials.addData('text_other.started', text_other.tStartRefresh)
-    trials.addData('text_other.stopped', text_other.tStopRefresh)
-    trials.addData('text.started', text.tStartRefresh)
-    trials.addData('text.stopped', text.tStopRefresh)
-    thisExp.addData("Strategy_resp", text.text)
+    # let's store the final text string into the results finle...
+    thisExp.addData('Strategy_resp', text.text)
+    
     # the Routine "Strategy" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
