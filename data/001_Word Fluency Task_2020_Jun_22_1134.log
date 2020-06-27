@@ -1,0 +1,308 @@
+0.9720 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'pyo', 'pygame'] (in that order).
+10.0650 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+10.0653 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x109630390>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x1093eaa90>, multiSample=False, name='window1', numSamples=2, pos=[640.0, 360.0], screen=0, size=array([5120, 2880]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+10.0653 	EXP 	window1: recordFrameIntervals = False
+10.5412 	EXP 	window1: recordFrameIntervals = True
+10.7092 	WARNING 	t of last frame was 84.56ms (=1/11)
+10.8018 	WARNING 	t of last frame was 72.88ms (=1/13)
+10.9080 	WARNING 	t of last frame was 79.27ms (=1/12)
+10.9911 	WARNING 	t of last frame was 83.12ms (=1/12)
+11.0127 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+13.0952 	DATA 	Keypress: space
+15.3063 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+15.3460 	EXP 	Created instructions = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='instructions', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1280.,  720.]), texRes=512, units='pix', win=Window(...))
+15.4141 	EXP 	Created fixation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+15.4214 	EXP 	Created timer = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='timer', opacity=1.0, ori=0, pos=array([-0.7,  0.4]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+15.4374 	EXP 	Created instruct_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instruct_text', opacity=1.0, ori=0, pos=array([0. , 0.4]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+15.4392 	EXP 	Created letter_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='letter_text', opacity=1.0, ori=0, pos=array([0.  , 0.28]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+15.4396 	EXP 	Created screen_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='screen_text', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+15.4399 	EXP 	Created list_text1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='list_text1', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+15.4404 	EXP 	Created list_text2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='list_text2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+15.4408 	EXP 	Created list_text3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-7.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='list_text3', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+15.4411 	EXP 	Created list_text4 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-8.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='list_text4', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+15.4415 	EXP 	Created list_text5 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-9.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='list_text5', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+15.4425 	EXP 	Created fixation_1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation_1', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+15.4477 	EXP 	Created difficulty_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='difficulty_question', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+15.4547 	EXP 	Created options = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='options', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+15.4623 	EXP 	Created anchor_1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='anchor_1', opacity=1.0, ori=0, pos=array([-0.4, -0.2]), rgb=array([255., 255., 255.]), text='Not difficult at all', units='height', win=Window(...), wrapWidth=1)
+15.4667 	EXP 	Created anchor_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='anchor_2', opacity=1.0, ori=0, pos=array([ 0.4, -0.2]), rgb=array([255., 255., 255.]), text='Very Difficult\n', units='height', win=Window(...), wrapWidth=1)
+15.4870 	EXP 	Created text_other = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_other', opacity=1.0, ori=0, pos=array([0.  , 0.25]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+15.4875 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+15.4922 	EXP 	Created thank_you = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='thank_you', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+15.4978 	EXP 	Imported instructions.xlsx as conditions, 6 conditions, 1 params
+15.4980 	EXP 	Created sequence: sequential, trialTypes=6, nReps=1, seed=None
+15.4982 	EXP 	New trial (rep=0, index=0): OrderedDict([('INS', 'Slide1.png')])
+15.5642 	EXP 	instructions: image = 'Slide1.png'
+15.5642 	EXP 	instructions: autoDraw = True
+19.7278 	EXP 	New trial (rep=0, index=1): OrderedDict([('INS', 'Slide2.png')])
+19.7558 	DATA 	Keypress: space
+19.8106 	EXP 	instructions: autoDraw = False
+19.8106 	EXP 	instructions: image = 'Slide2.png'
+19.8106 	EXP 	instructions: autoDraw = True
+20.8116 	EXP 	New trial (rep=0, index=2): OrderedDict([('INS', 'Slide3.png')])
+20.8386 	DATA 	Keypress: space
+20.8834 	EXP 	instructions: autoDraw = False
+20.8834 	EXP 	instructions: image = 'Slide3.png'
+20.8834 	EXP 	instructions: autoDraw = True
+21.7951 	EXP 	New trial (rep=0, index=3): OrderedDict([('INS', 'Slide4.png')])
+21.8220 	DATA 	Keypress: space
+21.8665 	EXP 	instructions: autoDraw = False
+21.8665 	EXP 	instructions: image = 'Slide4.png'
+21.8665 	EXP 	instructions: autoDraw = True
+22.5120 	EXP 	New trial (rep=0, index=4): OrderedDict([('INS', 'Slide5.png')])
+22.5337 	DATA 	Keypress: space
+22.5834 	EXP 	instructions: autoDraw = False
+22.5834 	EXP 	instructions: image = 'Slide5.png'
+22.5834 	EXP 	instructions: autoDraw = True
+23.2125 	EXP 	New trial (rep=0, index=5): OrderedDict([('INS', 'Slide6.png')])
+23.2395 	DATA 	Keypress: space
+23.3117 	EXP 	instructions: autoDraw = False
+23.3117 	EXP 	instructions: image = 'Slide6.png'
+23.3117 	EXP 	instructions: autoDraw = True
+24.2814 	EXP 	Imported conditions.xlsx as conditions, 9 conditions, 2 params
+24.2816 	EXP 	Created sequence: random, trialTypes=9, nReps=1, seed=None
+24.2820 	EXP 	New trial (rep=0, index=0): OrderedDict([('Category', 'Things in a kitchen'), ('Type', 'Spatial')])
+24.2852 	DATA 	Keypress: space
+24.2994 	EXP 	instructions: autoDraw = False
+24.2994 	EXP 	letter_text: text = 'Things in a kitchen'
+24.2994 	EXP 	list_text1: text = ''
+24.2994 	EXP 	list_text1: pos = [-0.6, 0.15]
+24.2994 	EXP 	list_text2: text = ''
+24.2994 	EXP 	list_text2: pos = [-0.3, 0.15]
+24.2994 	EXP 	list_text3: text = ''
+24.2994 	EXP 	list_text3: pos = [0, 0.15]
+24.2994 	EXP 	list_text4: text = ''
+24.2994 	EXP 	list_text4: pos = [0.3, 0.15]
+24.2994 	EXP 	list_text5: text = ''
+24.2994 	EXP 	list_text5: pos = [0.6, 0.15]
+24.2994 	EXP 	letter_text: font = 'Arial'
+24.2994 	EXP 	letter_text: bold = True
+24.2994 	EXP 	fixation: autoDraw = True
+25.2833 	EXP 	timer: autoDraw = True
+25.2833 	EXP 	instruct_text: autoDraw = True
+25.2833 	EXP 	letter_text: autoDraw = True
+25.2833 	EXP 	screen_text: autoDraw = True
+25.2833 	EXP 	list_text1: autoDraw = True
+25.2833 	EXP 	list_text2: autoDraw = True
+25.2833 	EXP 	list_text3: autoDraw = True
+25.2833 	EXP 	list_text4: autoDraw = True
+25.2833 	EXP 	list_text5: autoDraw = True
+25.2833 	EXP 	letter_text: text = 'Things in a kitchen'
+25.3624 	EXP 	fixation: autoDraw = False
+27.2471 	DATA 	Keypress: m
+27.2677 	EXP 	screen_text: text = 'm'
+27.3479 	DATA 	Keypress: i
+27.4294 	EXP 	screen_text: text = 'mi'
+27.4309 	DATA 	Keypress: x
+27.4514 	EXP 	screen_text: text = 'mix'
+27.7993 	DATA 	Keypress: e
+27.8647 	EXP 	screen_text: text = 'mixe'
+27.8660 	DATA 	Keypress: r
+27.8836 	EXP 	screen_text: text = 'mixer'
+28.5145 	DATA 	Keypress: return
+28.5827 	EXP 	screen_text: text = 'mixer'
+28.5827 	EXP 	screen_text: text = ''
+28.5827 	EXP 	list_text1: pos = array([-0.6   ,  0.1216])
+28.5827 	EXP 	list_text1: text = '\nmixer'
+29.4702 	DATA 	Keypress: f
+29.4968 	EXP 	screen_text: text = 'f'
+29.5593 	DATA 	Keypress: o
+29.5822 	EXP 	screen_text: text = 'fo'
+29.6514 	DATA 	Keypress: r
+29.6676 	EXP 	screen_text: text = 'for'
+29.7488 	DATA 	Keypress: k
+29.7677 	EXP 	screen_text: text = 'fork'
+29.8499 	DATA 	Keypress: return
+29.9252 	EXP 	screen_text: text = 'fork'
+29.9252 	EXP 	screen_text: text = ''
+29.9252 	EXP 	list_text1: pos = array([-0.6   ,  0.0932])
+29.9252 	EXP 	list_text1: text = '\nmixer\nfork'
+31.3657 	DATA 	Keypress: k
+31.3852 	EXP 	screen_text: text = 'k'
+31.3865 	DATA 	Keypress: n
+31.4644 	EXP 	screen_text: text = 'kn'
+31.5489 	DATA 	Keypress: i
+31.5689 	EXP 	screen_text: text = 'kni'
+31.6493 	DATA 	Keypress: f
+31.7210 	EXP 	screen_text: text = 'knif'
+31.7223 	DATA 	Keypress: e
+31.7355 	EXP 	screen_text: text = 'knife'
+31.8932 	DATA 	Keypress: return
+31.9188 	EXP 	screen_text: text = 'knife'
+31.9188 	EXP 	screen_text: text = ''
+31.9188 	EXP 	list_text1: pos = array([-0.6   ,  0.0648])
+31.9188 	EXP 	list_text1: text = '\nmixer\nfork\nknife'
+32.9632 	DATA 	Keypress: o
+32.9856 	EXP 	screen_text: text = 'o'
+33.0875 	DATA 	Keypress: t
+33.1647 	EXP 	screen_text: text = 'ot'
+33.1665 	DATA 	Keypress: h
+33.2378 	EXP 	screen_text: text = 'oth'
+33.2532 	DATA 	Keypress: e
+33.2681 	EXP 	screen_text: text = 'othe'
+33.3497 	DATA 	Keypress: r
+33.4143 	EXP 	screen_text: text = 'other'
+33.7833 	DATA 	Keypress: t
+33.8023 	EXP 	screen_text: text = 'othert'
+34.0496 	DATA 	Keypress: backspace
+34.0691 	EXP 	screen_text: text = 'other'
+34.1499 	DATA 	Keypress: space
+34.2240 	EXP 	screen_text: text = 'other '
+34.2255 	DATA 	Keypress: t
+34.2363 	EXP 	screen_text: text = 'other t'
+34.3095 	DATA 	Keypress: h
+34.3323 	EXP 	screen_text: text = 'other th'
+34.4063 	DATA 	Keypress: i
+34.4192 	EXP 	screen_text: text = 'other thi'
+34.5812 	DATA 	Keypress: n
+34.6018 	EXP 	screen_text: text = 'other thin'
+34.6031 	DATA 	Keypress: g
+34.6774 	EXP 	screen_text: text = 'other thing'
+34.7840 	DATA 	Keypress: s
+34.8654 	EXP 	screen_text: text = 'other things'
+34.8665 	DATA 	Keypress: return
+34.9465 	EXP 	screen_text: text = 'other things'
+34.9465 	EXP 	screen_text: text = ''
+34.9465 	EXP 	list_text1: pos = array([-0.6   ,  0.0364])
+34.9465 	EXP 	list_text1: text = '\nmixer\nfork\nknife\nother things'
+35.3854 	EXP 	fixation: autoDraw = False
+35.3854 	EXP 	timer: autoDraw = False
+35.3854 	EXP 	instruct_text: autoDraw = False
+35.3854 	EXP 	letter_text: autoDraw = False
+35.3854 	EXP 	screen_text: autoDraw = False
+35.3854 	EXP 	list_text1: autoDraw = False
+35.3854 	EXP 	list_text2: autoDraw = False
+35.3854 	EXP 	list_text3: autoDraw = False
+35.3854 	EXP 	list_text4: autoDraw = False
+35.3854 	EXP 	list_text5: autoDraw = False
+35.3854 	EXP 	fixation_1: autoDraw = True
+36.3610 	EXP 	difficulty_question: autoDraw = True
+36.3610 	EXP 	options: autoDraw = True
+36.3610 	EXP 	anchor_1: autoDraw = True
+36.3610 	EXP 	anchor_2: autoDraw = True
+36.4522 	EXP 	fixation_1: autoDraw = False
+38.2529 	DATA 	Keypress: 5
+38.3184 	EXP 	fixation_1: autoDraw = False
+38.3184 	EXP 	difficulty_question: autoDraw = False
+38.3184 	EXP 	options: autoDraw = False
+38.3184 	EXP 	anchor_1: autoDraw = False
+38.3184 	EXP 	anchor_2: autoDraw = False
+38.3184 	EXP 	text: text = ''
+38.3184 	EXP 	text_other: autoDraw = True
+38.3184 	EXP 	text: autoDraw = True
+39.7672 	DATA 	Keypress: lshift
+39.8315 	DATA 	Keypress: i
+39.8543 	EXP 	text: text = 'I'
+39.9218 	DATA 	Keypress: t
+39.9374 	EXP 	text: text = 'It'
+40.0354 	DATA 	Keypress: space
+40.0993 	EXP 	text: text = 'It '
+40.1026 	DATA 	Keypress: p
+40.2000 	EXP 	text: text = 'It p'
+40.2013 	DATA 	Keypress: o
+40.2216 	EXP 	text: text = 'It po'
+40.3894 	DATA 	Keypress: p
+40.4671 	EXP 	text: text = 'It pop'
+40.5683 	DATA 	Keypress: p
+40.6442 	EXP 	text: text = 'It popp'
+40.6458 	DATA 	Keypress: w
+40.6467 	DATA 	Keypress: e
+40.6560 	EXP 	text: text = 'It poppw'
+40.7355 	DATA 	Keypress: d
+40.7551 	EXP 	text: text = 'It poppwd'
+41.0182 	DATA 	Keypress: backspace
+41.0815 	EXP 	text: text = 'It poppw'
+41.1723 	DATA 	Keypress: backspace
+41.1884 	EXP 	text: text = 'It popp'
+41.2854 	DATA 	Keypress: backspace
+41.3586 	EXP 	text: text = 'It pop'
+41.3599 	DATA 	Keypress: e
+41.3714 	EXP 	text: text = 'It pope'
+41.3726 	DATA 	Keypress: d
+41.4414 	EXP 	text: text = 'It poped'
+41.5302 	DATA 	Keypress: space
+41.5526 	EXP 	text: text = 'It poped '
+41.6353 	DATA 	Keypress: i
+41.6549 	EXP 	text: text = 'It poped i'
+41.7358 	DATA 	Keypress: n
+41.7986 	EXP 	text: text = 'It poped in'
+41.8013 	DATA 	Keypress: t
+41.9009 	EXP 	text: text = 'It poped int'
+41.9024 	DATA 	Keypress: o
+41.9214 	EXP 	text: text = 'It poped into'
+42.0021 	DATA 	Keypress: space
+42.0787 	EXP 	text: text = 'It poped into '
+42.1856 	DATA 	Keypress: m
+42.2492 	EXP 	text: text = 'It poped into m'
+42.3521 	DATA 	Keypress: u
+42.3717 	EXP 	text: text = 'It poped into mu'
+42.3733 	DATA 	Keypress: space
+42.4511 	EXP 	text: text = 'It poped into mu '
+42.5169 	DATA 	Keypress: h
+42.5384 	EXP 	text: text = 'It poped into mu h'
+42.6189 	DATA 	Keypress: e
+42.6383 	EXP 	text: text = 'It poped into mu he'
+42.6399 	DATA 	Keypress: a
+42.7177 	EXP 	text: text = 'It poped into mu hea'
+42.9020 	DATA 	Keypress: backspace
+42.9665 	EXP 	text: text = 'It poped into mu he'
+42.9892 	DATA 	Keypress: backspace
+43.0679 	EXP 	text: text = 'It poped into mu h'
+43.1687 	DATA 	Keypress: backspace
+43.2501 	EXP 	text: text = 'It poped into mu '
+43.3522 	DATA 	Keypress: backspace
+43.4164 	EXP 	text: text = 'It poped into mu'
+43.5184 	DATA 	Keypress: backspace
+43.5382 	EXP 	text: text = 'It poped into m'
+43.9637 	DATA 	Keypress: backspace
+43.9883 	EXP 	text: text = 'It poped into '
+44.6029 	DATA 	Keypress: m
+44.6664 	EXP 	text: text = 'It poped into m'
+44.7690 	DATA 	Keypress: y
+44.7889 	EXP 	text: text = 'It poped into my'
+44.8697 	DATA 	Keypress: space
+44.9406 	EXP 	text: text = 'It poped into my '
+44.9421 	DATA 	Keypress: h
+44.9559 	EXP 	text: text = 'It poped into my h'
+45.0375 	DATA 	Keypress: e
+45.0388 	DATA 	Keypress: a
+45.0562 	EXP 	text: text = 'It poped into my he'
+45.1404 	DATA 	Keypress: d
+45.2066 	EXP 	text: text = 'It poped into my hed'
+45.3855 	DATA 	Keypress: return
+45.3863 	EXP 	New trial (rep=0, index=1): OrderedDict([('Category', 'Occupations'), ('Type', 'Semantic')])
+45.4056 	EXP 	text_other: autoDraw = False
+45.4056 	EXP 	text: autoDraw = False
+45.4056 	EXP 	letter_text: text = 'Occupations'
+45.4056 	EXP 	list_text1: text = ''
+45.4056 	EXP 	list_text1: pos = [-0.6, 0.15]
+45.4056 	EXP 	list_text2: text = ''
+45.4056 	EXP 	list_text2: pos = [-0.3, 0.15]
+45.4056 	EXP 	list_text3: text = ''
+45.4056 	EXP 	list_text3: pos = [0, 0.15]
+45.4056 	EXP 	list_text4: text = ''
+45.4056 	EXP 	list_text4: pos = [0.3, 0.15]
+45.4056 	EXP 	list_text5: text = ''
+45.4056 	EXP 	list_text5: pos = [0.6, 0.15]
+45.4056 	EXP 	letter_text: font = 'Arial'
+45.4056 	EXP 	letter_text: bold = True
+45.4056 	EXP 	fixation: autoDraw = True
+46.3900 	EXP 	timer: autoDraw = True
+46.3900 	EXP 	instruct_text: autoDraw = True
+46.3900 	EXP 	letter_text: autoDraw = True
+46.3900 	EXP 	screen_text: autoDraw = True
+46.3900 	EXP 	list_text1: autoDraw = True
+46.3900 	EXP 	list_text2: autoDraw = True
+46.3900 	EXP 	list_text3: autoDraw = True
+46.3900 	EXP 	list_text4: autoDraw = True
+46.3900 	EXP 	list_text5: autoDraw = True
+46.3900 	EXP 	letter_text: text = 'Occupations'
+46.4615 	EXP 	fixation: autoDraw = False
+47.2876 	DATA 	Keypress: escape
+47.5530 	EXP 	window1: mouseVisible = True
