@@ -603,7 +603,6 @@ function TrialRoutineBegin(trials) {
 
 var frameRemains;
 var timerText;
-var _pj;
 var keys;
 function TrialRoutineEachFrame(trials) {
   return function () {
@@ -758,28 +757,10 @@ function TrialRoutineEachFrame(trials) {
       list_text5.setAutoDraw(false);
     }
     timerText= Math.round(routineTimer.getTime()).toString() 
-    var _pj;
-    function _pj_snippets(container) {
-        function in_es6(left, right) {
-            if (((right instanceof Array) || ((typeof right) === "string"))) {
-                return (right.indexOf(left) > (- 1));
-            } else {
-                if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {
-                    return right.has(left);
-                } else {
-                    return (left in right);
-                }
-            }
-        }
-        container["in_es6"] = in_es6;
-        return container;
-    }
-    _pj = {};
-    _pj_snippets(_pj);
-    keys = event.getKeys();
-    t = TrialClock.getTime();
-    if (_pj.in_es6("escape", keys)) {
-        core.quit();
+    
+    keys = psychoJS.eventManager.getKeys();
+    if (keys.indexOf('escape') > -1) {
+        psychoJS.experiment.experimentEnded = true;
     } else {
         if (keys) {
             if ((keys[0] === "space")) {
@@ -791,7 +772,7 @@ function TrialRoutineEachFrame(trials) {
                     if ((keys[0] === "backspace")) {
                         textFill = textFill.slice(0, (- 1));
                     } else {
-                        if (_pj.in_es6(keys[0], allLetters)) {
+                        if (allLetters.indexOf(keys[0]) > -1) {
                             textFill += keys[0];
                         }
                     }
@@ -799,8 +780,8 @@ function TrialRoutineEachFrame(trials) {
             }
             screen_text.setText(textFill);
             if ((keys[0] === "return")) {
-                column = textController[textIndex];
-                column_text = ((column.text + "\n") + screen_text.text);
+                let column = textController[textIndex];
+                let column_text = ((column.text + "\n") + screen_text.text);
                 textFill = "";
                 screen_text.setText(textFill);
                 column.setPos([column.pos[0], (column.pos[1] - 0.0284)]);
