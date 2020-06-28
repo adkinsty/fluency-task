@@ -853,10 +853,14 @@ function TrialRoutineEnd(trials) {
         }
     }
     
-    for ([i, time] of words_rt['list'].entries()) {
-      if (time === thisList) {
-        psychoJS.experiment.addData(("times" + num.toString()), times); // #see Wakefields crib sheet for append
-      }
+    let i= 1
+    for (var time of words_rt)
+    {
+        if (time.length > 0)
+        {
+           psychoJS.experiment.addData("rt_" + num.toString(), time)
+           i= i + 1
+        }
     }
     
     routineTimer.reset();
