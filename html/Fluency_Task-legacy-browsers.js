@@ -825,7 +825,6 @@ function TrialRoutineEachFrame(trials) {
 
 var word_strings;
 var all_words;
-var num;
 function TrialRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'Trial'-------
@@ -836,24 +835,31 @@ function TrialRoutineEnd(trials) {
     });
     word_strings = [list_text1, list_text2, list_text3, list_text4, list_text5];
     all_words = [];
-    for (var this_word_string, _pj_c = 0, _pj_a = word_strings, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
-        this_word_string = _pj_a[_pj_c];
-        all_words.extend(this_word_string.text.strip().split("\n"));
-    }
-    num = 1;
-    for (var ws, _pj_c = 0, _pj_a = all_words, _pj_b = _pj_a.length; (_pj_c < _pj_b); _pj_c += 1) {
-        ws = _pj_a[_pj_c];
-        thisExp.addData(("word" + num.toString()), ws);
-        num = (num + 1);
+    
+    for (var this_word_string of word_strings)
+       all_words= all_words.concat(this_word_string.text.trim().split('\n'))
+    
+    let num= 1
+    for (var ws of all_words)
+    {
+        if (ws.length > 0)
+        {
+           psychoJS.experiment.addData("word" + num.toString(), ws)
+           num= num + 1
+        }
     }
     
     for ([i, time] of words_rt['list'].entries()) {
       if (time === thisList) {
-        thisExp.addData(("times" + num.toString()), times); // #see Wakefields crib sheet for append
+        psychoJS.experiment.addData(("times" + num.toString()), times); // #see Wakefields crib sheet for append
       }
     }
     
     routineTimer.reset();
+    
+    
+    
+    
     
     return Scheduler.Event.NEXT;
   };
