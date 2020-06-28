@@ -1230,5 +1230,4 @@ function quitPsychoJS(message, isCompleted) {
   psychoJS.window.close();
   psychoJS.quit({message: message, isCompleted: isCompleted});
   
-  return Scheduler.Event.QUIT;
-}
+  return Scheduler.Event.QUIT; }
