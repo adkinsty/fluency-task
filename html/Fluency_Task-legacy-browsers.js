@@ -1047,11 +1047,7 @@ function StrategyRoutineBegin(trials) {
     frameN = -1;
     // update component parameters for each repeat
     psychoJS.eventManager.clearEvents()
-    
-    
     allLetters = "abcdefghijklmnopqrstuvwxyz".split('');
-    
-    
     modify = false;
     text.text = "";
     
@@ -1070,6 +1066,7 @@ function StrategyRoutineBegin(trials) {
 }
 
 
+var textAdd;
 function StrategyRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'Strategy'-------
@@ -1098,29 +1095,31 @@ function StrategyRoutineEachFrame(trials) {
       text.setAutoDraw(true);
     }
 
-    keys = psychoJS.eventManager.getKeys();
-    if (keys.indexOf('escape') > -1) {
-        psychoJS.experiment.experimentEnded = true;
-    } else {
-        if (keys) {
-            if ((keys[0] === "space")) {
-                textFill += " ";
-            } else {
-                if ((keys[0] === "right")) {
-                    continueRoutine = false;
-                } else {
-                    if ((keys[0] === "backspace")) {
-                        textFill = textFill.slice(0, (- 1));
-                    } else {
-                        if (allLetters.indexOf(keys[0]) > -1) {
-                            textFill += keys[0];
-                        }
-                    }
-                }
-            }
-        }
-    }
+    let theseKeys = psychoJS.eventManager.getKeys();
+    if (theseKeys.length > 0) {  // at least one key was pressed
+      textAdd = theseKeys[theseKeys.length-1]; 
+      }
     
+    
+    if (textAdd === 'return') {
+        textAdd = '';  // Add nothing
+        continueRoutine = false;
+    } else if (textAdd === 'space') {
+        textAdd = ' ';  // Add a space
+    } else if (textAdd === 'backspace') {
+        text.text = text.text.slice(0, -1);
+        textAdd = undefined;
+    } else if (['lshift', 'rshift'].includes(textAdd)) {
+        modify = true;
+    } else if (textAdd !== undefined) {
+        if (modify) {
+            text.text = text.text + textAdd.toUpperCase();
+            modify = false;
+        } else {
+            text.text = text.text + textAdd
+        }
+        textAdd = undefined;
+    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -1156,9 +1155,7 @@ function StrategyRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     });
-    
-    thisExp.addData("Strategy_resp", text.text);
-    
+    psychoJS.experiment.thisExp.addData("Strategy_resp", text.text);
     
     // the Routine "Strategy" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
