@@ -1157,7 +1157,7 @@ function StrategyRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.thisExp.addData("Strategy_resp", text.text);
+    psychoJS.experiment.addData("Strategy_resp", text.text);
     
     // the Routine "Strategy" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
