@@ -70,8 +70,7 @@ function updateInfo() {
 
   // add info from the URL:
   util.addInfoFromUrl(expInfo);
-  psychoJS.setRedirectUrls('https://www.surveymonkey.com/r/BVGP2P7', '');
-
+  
   return Scheduler.Event.NEXT;
 }
 
@@ -1107,6 +1106,10 @@ function StrategyRoutineEachFrame(trials) {
         continueRoutine = false;
     } else if (textAdd === 'space') {
         textAdd = ' ';  // Add a space
+    } else if (textAdd === 'apostrophe') {
+        textAdd = "'";
+    } else if (textAdd === 'period') {
+        textAdd = ".";
     } else if (textAdd === 'backspace') {
         text.text = text.text.slice(0, -1);
         textAdd = undefined;

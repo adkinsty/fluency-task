@@ -59,7 +59,7 @@
         <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
       <KeyboardComponent name="spacebar0">
-        <Param name="allowedKeys" updates="constant" val="'space','y','n','g'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'space','y','g'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -82,8 +82,8 @@
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="keys = event.getKeys()&amp;#10;&amp;#10;if 'n' in keys:&amp;#10;    core.quit()  # So you can quit&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="keys = psychoJS.eventManager.getKeys();&amp;#10;&amp;#10;&amp;#10;if (keys.indexOf('n') &gt; -1) {&amp;#10;    psychoJS.experiment.experimentEnded = true;&amp;#10;} " valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="&amp;#10;" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
