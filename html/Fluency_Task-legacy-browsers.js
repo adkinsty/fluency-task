@@ -456,7 +456,6 @@ function InstructionsRoutineBegin(trials) {
 
 
 var continueRoutine;
-var keys;
 function InstructionsRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'Instructions'-------
@@ -489,7 +488,7 @@ function InstructionsRoutineEachFrame(trials) {
     }
 
     if (spacebar0.status === PsychoJS.Status.STARTED) {
-      let theseKeys = spacebar0.getKeys({keyList: ['space', 'y', 'n', 'g'], waitRelease: false});
+      let theseKeys = spacebar0.getKeys({keyList: ['space', 'y', 'g'], waitRelease: false});
       _spacebar0_allKeys = _spacebar0_allKeys.concat(theseKeys);
       if (_spacebar0_allKeys.length > 0) {
         spacebar0.keys = _spacebar0_allKeys[_spacebar0_allKeys.length - 1].name;  // just the last key pressed
@@ -499,12 +498,6 @@ function InstructionsRoutineEachFrame(trials) {
       }
     }
     
-    keys = psychoJS.eventManager.getKeys();
-    
-    
-    if (keys.indexOf('n') > -1) {
-        psychoJS.experiment.experimentEnded = true;
-    } 
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -607,6 +600,7 @@ function TrialRoutineBegin(trials) {
 
 var frameRemains;
 var timerText;
+var keys;
 function TrialRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'Trial'-------
