@@ -558,7 +558,7 @@ function TrialRoutineBegin(trials) {
     t = 0;
     TrialClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(61.000000);
+    routineTimer.add(91.000000);
     // update component parameters for each repeat
     letter_text.setText(Category);
     event.clearEvents();
@@ -637,7 +637,7 @@ function TrialRoutineEachFrame(trials) {
       timer.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (timer.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       timer.setAutoDraw(false);
     }
@@ -655,7 +655,7 @@ function TrialRoutineEachFrame(trials) {
       instruct_text.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (instruct_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       instruct_text.setAutoDraw(false);
     }
@@ -669,7 +669,7 @@ function TrialRoutineEachFrame(trials) {
       letter_text.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (letter_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       letter_text.setAutoDraw(false);
     }
@@ -683,7 +683,7 @@ function TrialRoutineEachFrame(trials) {
       screen_text.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (screen_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       screen_text.setAutoDraw(false);
     }
@@ -697,7 +697,7 @@ function TrialRoutineEachFrame(trials) {
       list_text1.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (list_text1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text1.setAutoDraw(false);
     }
@@ -711,7 +711,7 @@ function TrialRoutineEachFrame(trials) {
       list_text2.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (list_text2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text2.setAutoDraw(false);
     }
@@ -725,7 +725,7 @@ function TrialRoutineEachFrame(trials) {
       list_text3.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (list_text3.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text3.setAutoDraw(false);
     }
@@ -739,7 +739,7 @@ function TrialRoutineEachFrame(trials) {
       list_text4.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (list_text4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text4.setAutoDraw(false);
     }
@@ -753,7 +753,7 @@ function TrialRoutineEachFrame(trials) {
       list_text5.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 60 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (list_text5.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text5.setAutoDraw(false);
     }
