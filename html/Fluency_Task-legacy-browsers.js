@@ -70,7 +70,8 @@ function updateInfo() {
 
   // add info from the URL:
   util.addInfoFromUrl(expInfo);
-  
+  psychoJS.setRedirectUrls('https://www.surveymonkey.com/r/BVGP2P7', '');
+
   return Scheduler.Event.NEXT;
 }
 
