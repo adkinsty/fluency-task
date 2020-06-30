@@ -1316,18 +1316,25 @@ function importConditions(trials) {
 }
 
 
+// function quitPsychoJS(message, isCompleted) {
+//   // Check for and save orphaned data
+//   if (psychoJS.experiment.isEntryEmpty()) {
+//     psychoJS.experiment.nextEntry();
+//   }
+  
+  
 function quitPsychoJS(message, isCompleted) {
   // Check for and save orphaned data
-  if (psychoJS.experiment.isEntryEmpty()) {
+  if (Object.keys(psychoJS.experiment._thisEntry).length > 0) {
     psychoJS.experiment.nextEntry();
   }
+  psychoJS.window.close();
+  psychoJS.quit({message: message, isCompleted: isCompleted});
+
+  return Scheduler.Event.QUIT;
+}
   
-  
-  
-  
-  
-  
-  
+
   
   psychoJS.window.close();
   psychoJS.quit({message: message, isCompleted: isCompleted});
