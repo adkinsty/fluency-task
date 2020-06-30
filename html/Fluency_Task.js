@@ -401,7 +401,7 @@ function trialsLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'conditions copy.xlsx',
+    trialList: 'conditions.xlsx',
     seed: undefined, name: 'trials'
   });
   psychoJS.experiment.addLoop(trials); // add the loop to the experiment
@@ -1113,9 +1113,9 @@ function StrategyRoutineEachFrame(trials) {
     } else if (textAdd === 'space') {
         textAdd = ' ';  // Add a space
     } else if (textAdd === 'apostrophe') {
-        textAdd = "'";
+        textAdd = "'"; // Add an apostophe
     } else if (textAdd === 'period') {
-        textAdd = ".";
+        textAdd = "."; // Add a period
     } else if (textAdd === 'backspace') {
         text.text = text.text.slice(0, -1);
         textAdd = undefined;
