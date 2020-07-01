@@ -107,7 +107,6 @@ var text_other;
 var text;
 var EndClock;
 var thank_you;
-var key_resp_thank_you;
 var globalClock;
 var routineTimer;
 function experimentInit() {
@@ -340,8 +339,6 @@ function experimentInit() {
     color: new util.Color('white'),  opacity: 1,
     depth: 0.0 
   });
-  
-  key_resp_thank_you = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Create some handy timers
   globalClock = new util.Clock();  // to track the time since experiment started
@@ -1173,7 +1170,6 @@ function StrategyRoutineEnd(trials) {
 }
 
 
-var _key_resp_thank_you_allKeys;
 var EndComponents;
 function EndRoutineBegin(trials) {
   return function () {
@@ -1181,14 +1177,11 @@ function EndRoutineBegin(trials) {
     t = 0;
     EndClock.reset(); // clock
     frameN = -1;
+    routineTimer.add(3.000000);
     // update component parameters for each repeat
-    key_resp_thank_you.keys = undefined;
-    key_resp_thank_you.rt = undefined;
-    _key_resp_thank_you_allKeys = [];
     // keep track of which components have finished
     EndComponents = [];
     EndComponents.push(thank_you);
-    EndComponents.push(key_resp_thank_you);
     
     EndComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
@@ -1210,7 +1203,7 @@ function EndRoutineEachFrame(trials) {
     // update/draw components on each frame
     
     // *thank_you* updates
-    if (t >= 0.0 && thank_you.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 0 && thank_you.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       thank_you.tStart = t;  // (not accounting for frame time here)
       thank_you.frameNStart = frameN;  // exact frame index
@@ -1218,29 +1211,10 @@ function EndRoutineEachFrame(trials) {
       thank_you.setAutoDraw(true);
     }
 
-    
-    // *key_resp_thank_you* updates
-    if (t >= 0.0 && key_resp_thank_you.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      key_resp_thank_you.tStart = t;  // (not accounting for frame time here)
-      key_resp_thank_you.frameNStart = frameN;  // exact frame index
-      
-      // keyboard checking is just starting
-      psychoJS.window.callOnFlip(function() { key_resp_thank_you.clock.reset(); });  // t=0 on next screen flip
-      psychoJS.window.callOnFlip(function() { key_resp_thank_you.start(); }); // start on screen flip
+    frameRemains = 0 + 3 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (thank_you.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      thank_you.setAutoDraw(false);
     }
-
-    if (key_resp_thank_you.status === PsychoJS.Status.STARTED) {
-      let theseKeys = key_resp_thank_you.getKeys({keyList: ['q'], waitRelease: false});
-      _key_resp_thank_you_allKeys = _key_resp_thank_you_allKeys.concat(theseKeys);
-      if (_key_resp_thank_you_allKeys.length > 0) {
-        key_resp_thank_you.keys = _key_resp_thank_you_allKeys[_key_resp_thank_you_allKeys.length - 1].name;  // just the last key pressed
-        key_resp_thank_you.rt = _key_resp_thank_you_allKeys[_key_resp_thank_you_allKeys.length - 1].rt;
-        // a response ends the routine
-        continueRoutine = false;
-      }
-    }
-    
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -1259,7 +1233,7 @@ function EndRoutineEachFrame(trials) {
     });
     
     // refresh the screen if continuing
-    if (continueRoutine) {
+    if (continueRoutine && routineTimer.getTime() > 0) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -1276,9 +1250,6 @@ function EndRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     });
-    // the Routine "End" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
-    
     return Scheduler.Event.NEXT;
   };
 }
