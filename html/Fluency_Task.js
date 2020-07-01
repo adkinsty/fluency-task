@@ -1265,7 +1265,6 @@ function EndRoutineEachFrame(trials) {
   else {
     return Scheduler.Event.NEXT;
   }
-}
 
 
 function EndRoutineEnd() {
