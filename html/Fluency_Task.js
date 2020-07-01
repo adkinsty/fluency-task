@@ -135,6 +135,7 @@ function experimentInit() {
   thisExp=psychoJS.experiment;
   win=psychoJS.window;
   event=psychoJS.eventManager;
+  Array.prototype.append = [].push;
   Object.prototype.upper = "".toUpperCase;
   shuffle = util.shuffle;
   
