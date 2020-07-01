@@ -1215,7 +1215,6 @@ function EndRoutineEachFrame(trials) {
       // keep track of start time/frame for later
       thank_you.tStart = t;  // (not accounting for frame time here)
       thank_you.frameNStart = frameN;  // exact frame index
-      
       thank_you.setAutoDraw(true);
     }
 
@@ -1259,29 +1258,24 @@ function EndRoutineEachFrame(trials) {
         break;
       }
     
-    // refresh the screen if continuing
-    if (continueRoutine) {
-      return Scheduler.Event.FLIP_REPEAT;
-    } else {
-      return Scheduler.Event.NEXT;
-    }
-  };
+  // refresh the screen if continuing
+  if (continueRoutine && routineTimer.getTime() > 0) {
+    return Scheduler.Event.FLIP_REPEAT;
+  }
+  else {
+    return Scheduler.Event.NEXT;
+  }
 }
 
 
-function EndRoutineEnd(trials) {
-  return function () {
+function EndRoutineEnd() {
     //------Ending Routine 'End'-------
     for (const thisComponent of EndComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
     }
-    // the Routine "End" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
-    
     return Scheduler.Event.NEXT;
-  };
 }
 
 
@@ -1292,7 +1286,7 @@ function endLoopIteration(thisScheduler, loop) {
       // ------Check if user ended loop early------
       if (loop.finished) {
         // Check for and save orphaned data
-        if (psychoJS.experiment.isEntryEmpty()) {
+        if (Object.keys(psychoJS.experiment._thisEntry).length > 0) {
           psychoJS.experiment.nextEntry(loop);
         }
       thisScheduler.stop();
