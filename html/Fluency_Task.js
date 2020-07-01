@@ -135,7 +135,6 @@ function experimentInit() {
   thisExp=psychoJS.experiment;
   win=psychoJS.window;
   event=psychoJS.eventManager;
-  Array.prototype.append = [].push;
   Object.prototype.upper = "".toUpperCase;
   shuffle = util.shuffle;
   
@@ -561,7 +560,7 @@ function TrialRoutineBegin(trials) {
     t = 0;
     TrialClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(91.000000);
+    routineTimer.add(11.000000);
     // update component parameters for each repeat
     letter_text.setText(Category);
     event.clearEvents();
@@ -640,7 +639,7 @@ function TrialRoutineEachFrame(trials) {
       timer.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (timer.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       timer.setAutoDraw(false);
     }
@@ -658,7 +657,7 @@ function TrialRoutineEachFrame(trials) {
       instruct_text.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (instruct_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       instruct_text.setAutoDraw(false);
     }
@@ -672,7 +671,7 @@ function TrialRoutineEachFrame(trials) {
       letter_text.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (letter_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       letter_text.setAutoDraw(false);
     }
@@ -686,7 +685,7 @@ function TrialRoutineEachFrame(trials) {
       screen_text.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (screen_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       screen_text.setAutoDraw(false);
     }
@@ -700,7 +699,7 @@ function TrialRoutineEachFrame(trials) {
       list_text1.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (list_text1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text1.setAutoDraw(false);
     }
@@ -714,7 +713,7 @@ function TrialRoutineEachFrame(trials) {
       list_text2.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (list_text2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text2.setAutoDraw(false);
     }
@@ -728,7 +727,7 @@ function TrialRoutineEachFrame(trials) {
       list_text3.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (list_text3.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text3.setAutoDraw(false);
     }
@@ -742,7 +741,7 @@ function TrialRoutineEachFrame(trials) {
       list_text4.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (list_text4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text4.setAutoDraw(false);
     }
@@ -756,7 +755,7 @@ function TrialRoutineEachFrame(trials) {
       list_text5.setAutoDraw(true);
     }
 
-    frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 1 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (list_text5.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text5.setAutoDraw(false);
     }
@@ -1316,25 +1315,21 @@ function importConditions(trials) {
 }
 
 
-// function quitPsychoJS(message, isCompleted) {
-//   // Check for and save orphaned data
-//   if (psychoJS.experiment.isEntryEmpty()) {
-//     psychoJS.experiment.nextEntry();
-//   }
-  
-//   psychoJS.window.close();
-//   psychoJS.quit({message: message, isCompleted: isCompleted});
-  
-//   return Scheduler.Event.QUIT;
-// }
-
 function quitPsychoJS(message, isCompleted) {
   // Check for and save orphaned data
-  if (Object.keys(psychoJS.experiment._thisEntry).length > 0) {
+  if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
+  
+  
+  
+  
+  
+  
   psychoJS.window.close();
   psychoJS.quit({message: message, isCompleted: isCompleted});
-
+  
   return Scheduler.Event.QUIT;
 }
