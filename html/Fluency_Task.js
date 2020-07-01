@@ -1202,7 +1202,6 @@ function EndRoutineBegin(trials) {
 
 
 function EndRoutineEachFrame(trials) {
-  return function () {
     //------Loop for each frame of Routine 'End'-------
     let continueRoutine = true; // until we're told otherwise
     // get current time
@@ -1275,7 +1274,8 @@ function EndRoutineEnd() {
       }
     }
     return Scheduler.Event.NEXT;
-}
+  }
+}  
 
 
 function endLoopIteration(thisScheduler, loop) {
