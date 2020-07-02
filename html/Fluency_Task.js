@@ -615,6 +615,7 @@ function TrialRoutineBegin(trials) {
 var frameRemains;
 var timerText;
 var keys;
+var trialClock;
 function TrialRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'Trial'-------
@@ -769,6 +770,7 @@ function TrialRoutineEachFrame(trials) {
     }
     timerText= Math.round(routineTimer.getTime()).toString() 
     keys = psychoJS.eventManager.getKeys();
+    trialClock = new util.Clock();
     t = trialClock.getTime();
     if (keys.indexOf('escape') > -1) {
         psychoJS.experiment.experimentEnded = true;
