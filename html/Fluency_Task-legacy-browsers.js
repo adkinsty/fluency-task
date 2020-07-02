@@ -129,6 +129,7 @@ function experimentInit() {
   Array.prototype.append = [].push;
   Object.prototype.upper = "".toUpperCase;
   shuffle = util.shuffle;
+  TrialClock = new util.Clock();
   
   // Initialize components for Routine "Trial"
   TrialClock = new util.Clock();
@@ -242,8 +243,9 @@ function experimentInit() {
     depth: -9.0 
   });
   
+  
   allLetters = "abcdefghijklmnopqrstuvwxyz".split('');
-  Array.prototype.append = [].push;
+  
   // Initialize components for Routine "Difficulty"
   DifficultyClock = new util.Clock();
   fixation_1 = new visual.TextStim({
@@ -611,7 +613,6 @@ function TrialRoutineBegin(trials) {
 var frameRemains;
 var timerText;
 var keys;
-var trialClock;
 function TrialRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'Trial'-------
@@ -766,8 +767,6 @@ function TrialRoutineEachFrame(trials) {
     }
     timerText= Math.round(routineTimer.getTime()).toString() 
     keys = psychoJS.eventManager.getKeys();
-    trialClock = new util.Clock();
-    t = trialClock.getTime();
     if (keys.indexOf('escape') > -1) {
         psychoJS.experiment.experimentEnded = true;
     } else {
@@ -790,7 +789,7 @@ function TrialRoutineEachFrame(trials) {
             screen_text.setText(textFill);
             
             if ((keys[0] === "return")) {
-                words_rt.append(t);
+                words_rt.append(timerText);
                 let column = textController[textIndex];
                 let column_text = ((column.text + "\n") + screen_text.text);
                 textFill = "";
@@ -864,9 +863,9 @@ function TrialRoutineEnd(trials) {
     }
     
     let i= 1
-    for (var t of words_rt)
+    for (var timerText of words_rt)
         {
-           psychoJS.experiment.addData("rt_" + i.toString(), t)
+           psychoJS.experiment.addData("rt_" + i.toString(), timerText)
            i= i + 1
         }
     
