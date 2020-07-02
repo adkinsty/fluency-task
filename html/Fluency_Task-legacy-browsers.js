@@ -243,7 +243,7 @@ function experimentInit() {
   });
   
   allLetters = "abcdefghijklmnopqrstuvwxyz".split('');
-  
+  Array.prototype.append = [].push;
   // Initialize components for Routine "Difficulty"
   DifficultyClock = new util.Clock();
   fixation_1 = new visual.TextStim({
