@@ -334,7 +334,7 @@ function experimentInit() {
   thank_you = new visual.TextStim({
     win: psychoJS.window,
     name: 'thank_you',
-    text: "This is the end of the experiment.\nThank you for your time.\nPress 'Q' to exit the experiment",
+    text: 'This is the end of the experiment.\nThank you for your time.\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
