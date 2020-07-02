@@ -870,7 +870,7 @@ function TrialRoutineEnd(trials) {
     let i= 1
     for (var t of words_rt)
         {
-           psychoJS.experiment.addData("rt_" + num.toString(), t)
+           psychoJS.experiment.addData("rt_" + i.toString(), t)
            i= i + 1
         }
     
