@@ -1109,16 +1109,17 @@ function StrategyRoutineEachFrame(trials) {
       textAdd = theseKeys[theseKeys.length-1]; 
       }
     
-    
     if (textAdd === 'return') {
         textAdd = '';  // Add nothing
-        continueRoutine = false;
+        continueRoutine = false; // End routine
     } else if (textAdd === 'space') {
         textAdd = ' ';  // Add a space
     } else if (textAdd === 'apostrophe') {
         textAdd = "'"; // Add an apostophe
     } else if (textAdd === 'slash') {
         textAdd = "/"; // Add a slash
+    } else if (textAdd === 'comma') {
+        textAdd = ","; // Add a comma
     } else if (textAdd === 'period') {
         textAdd = "."; // Add a period
     } else if (textAdd === 'backspace') {
@@ -1126,7 +1127,13 @@ function StrategyRoutineEachFrame(trials) {
     } else if (['lshift', 'rshift'].includes(textAdd)) {
         modify = true;
     } else if (textAdd !== undefined) {
+        if (modify) {
+            text.text = text.text + textAdd.toUpperCase();
+            modify = false;
+         } else {
             text.text = text.text + textAdd
+         }
+          textAdd = undefined;
     }
     
     // check for quit (typically the Esc key)
