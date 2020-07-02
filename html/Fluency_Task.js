@@ -2,13 +2,13 @@
  * Fluency_Task Test *
  *********************/
 
-import { PsychoJS } from 'https://pavlovia.org/lib/core.js';
-import * as core from 'https://pavlovia.org/lib/core.js';
-import { TrialHandler } from 'https://pavlovia.org/lib/data.js';
-import { Scheduler } from 'https://pavlovia.org/lib/util.js';
-import * as util from 'https://pavlovia.org/lib/util.js';
-import * as visual from 'https://pavlovia.org/lib/visual.js';
-import { Sound } from 'https://pavlovia.org/lib/sound.js';
+import { PsychoJS } from './lib/core-2020.1.js';
+import * as core from './lib/core-2020.1.js';
+import { TrialHandler } from './lib/data-2020.1.js';
+import { Scheduler } from './lib/util-2020.1.js';
+import * as util from './lib/util-2020.1.js';
+import * as visual from './lib/visual-2020.1.js';
+import * as sound from './lib/sound-2020.1.js';
 
 // init psychoJS:
 const psychoJS = new PsychoJS({
@@ -1301,6 +1301,13 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
+  
+  
+  
+  
+  
   
   psychoJS.window.close();
   psychoJS.quit({message: message, isCompleted: isCompleted});
