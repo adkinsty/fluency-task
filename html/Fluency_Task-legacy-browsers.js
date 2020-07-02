@@ -91,7 +91,6 @@ function experimentInit() {
   win=psychoJS.window;
   event=psychoJS.eventManager;
   Array.prototype.append = [].push;
-  Object.prototype.upper = "".toUpperCase;
   shuffle = util.shuffle;
   TrialClock = new util.Clock();
   
