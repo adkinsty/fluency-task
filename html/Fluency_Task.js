@@ -1,7 +1,7 @@
 ﻿/********************* 
  * Fluency_Task Test *
  *********************/
- 
+
 import { PsychoJS } from 'https://pavlovia.org/lib/core.js';
 import * as core from 'https://pavlovia.org/lib/core.js';
 import { TrialHandler } from 'https://pavlovia.org/lib/data.js';
@@ -1272,9 +1272,9 @@ function endLoopIteration(thisScheduler, loop) {
       // ------Check if user ended loop early------
       if (loop.finished) {
         // Check for and save orphaned data
-      if (Object.keys(psychoJS.experiment._thisEntry).length > 0) {
-        psychoJS.experiment.nextEntry();
-      }
+        if (psychoJS.experiment.isEntryEmpty()) {
+          psychoJS.experiment.nextEntry(loop);
+        }
       thisScheduler.stop();
       } else {
         const thisTrial = loop.getCurrentTrial();
@@ -1298,12 +1298,12 @@ function importConditions(trials) {
 
 function quitPsychoJS(message, isCompleted) {
   // Check for and save orphaned data
-  if (Object.keys(psychoJS.experiment._thisEntry).length > 0) {
+  if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
   psychoJS.window.close();
   psychoJS.quit({message: message, isCompleted: isCompleted});
-
+  
   return Scheduler.Event.QUIT;
 }
-
