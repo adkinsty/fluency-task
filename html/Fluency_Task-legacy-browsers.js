@@ -790,6 +790,7 @@ function TrialRoutineEachFrame(trials) {
             screen_text.setText(textFill);
             
             if ((keys[0] === "return")) {
+                words_rt.append(t);
                 let column = textController[textIndex];
                 let column_text = ((column.text + "\n") + screen_text.text);
                 textFill = "";
@@ -804,7 +805,6 @@ function TrialRoutineEachFrame(trials) {
                         continueRoutine = false;
                     }
                 }
-                words_rt.append(t);
                 column.setText(column_text);
             }
         }
