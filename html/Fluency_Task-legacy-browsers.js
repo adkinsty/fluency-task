@@ -1117,15 +1117,17 @@ function StrategyRoutineEachFrame(trials) {
         textAdd = ' ';  // Add a space
     } else if (textAdd === 'apostrophe') {
         textAdd = "'"; // Add an apostophe
+    } else if (textAdd === 'slash') {
+        textAdd = "/"; // Add a slash
     } else if (textAdd === 'period') {
         textAdd = "."; // Add a period
     } else if (textAdd === 'backspace') {
         text.text = text.text.slice(0, -1);
     } else if (['lshift', 'rshift'].includes(textAdd)) {
         modify = true;
-    } else {
+    } else if (textAdd !== undefined) {
             text.text = text.text + textAdd
-        }
+    }
     
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
