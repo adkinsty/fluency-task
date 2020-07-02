@@ -817,6 +817,7 @@ function TrialRoutineEnd(trials) {
     
     return Scheduler.Event.NEXT;
   };
+}
 
 function DifficultyRoutineBegin(trials) {
   return function () {
