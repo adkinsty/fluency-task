@@ -61,6 +61,8 @@ psychoJS.start({
   expInfo: expInfo,
   });
 
+
+var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
@@ -81,6 +83,40 @@ function updateInfo() {
   return Scheduler.Event.NEXT;
 }
 
+
+var InstructionsClock;
+var instructions;
+var spacebar0;
+var thisExp;
+var win;
+var event;
+var shuffle;
+var TrialClock;
+var fixation;
+var timer;
+var instruct_text;
+var letter_text;
+var screen_text;
+var list_text1;
+var list_text2;
+var list_text3;
+var list_text4;
+var list_text5;
+var allLetters;
+var DifficultyClock;
+var fixation_1;
+var difficulty_question;
+var options;
+var anchor_1;
+var anchor_2;
+var key_resp_diff;
+var StrategyClock;
+var text_other;
+var text;
+var EndClock;
+var thank_you;
+var globalClock;
+var routineTimer;
 function experimentInit() {
   // Initialize components for Routine "Instructions"
   InstructionsClock = new util.Clock();
@@ -319,6 +355,9 @@ function experimentInit() {
   return Scheduler.Event.NEXT;
 }
 
+
+var instructions_loop;
+var currentLoop;
 function instructions_loopLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   instructions_loop = new TrialHandler({
@@ -344,12 +383,15 @@ function instructions_loopLoopBegin(thisScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
 function instructions_loopLoopEnd() {
   psychoJS.experiment.removeLoop(instructions_loop);
 
   return Scheduler.Event.NEXT;
 }
 
+
+var trials;
 function trialsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   trials = new TrialHandler({
@@ -381,12 +423,18 @@ function trialsLoopBegin(thisScheduler) {
   return Scheduler.Event.NEXT;
 }
 
+
 function trialsLoopEnd() {
   psychoJS.experiment.removeLoop(trials);
 
   return Scheduler.Event.NEXT;
 }
 
+
+var t;
+var frameN;
+var _spacebar0_allKeys;
+var InstructionsComponents;
 function InstructionsRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'Instructions'-------
@@ -411,6 +459,8 @@ function InstructionsRoutineBegin(trials) {
   };
 }
 
+
+var continueRoutine;
 function InstructionsRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'Instructions'-------
@@ -479,6 +529,7 @@ function InstructionsRoutineEachFrame(trials) {
   };
 }
 
+
 function InstructionsRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'Instructions'-------
@@ -494,6 +545,13 @@ function InstructionsRoutineEnd(trials) {
   };
 }
 
+
+var textFill;
+var textController;
+var textIndex;
+var entryCount;
+var words_rt;
+var TrialComponents;
 function TrialRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'Trial'-------
@@ -553,6 +611,11 @@ function TrialRoutineBegin(trials) {
   };
 }
 
+
+var frameRemains;
+var timerText;
+var keys;
+var trialClock;
 function TrialRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'Trial'-------
@@ -777,6 +840,9 @@ function TrialRoutineEachFrame(trials) {
   };
 }
 
+
+var word_strings;
+var all_words;
 function TrialRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'Trial'-------
@@ -807,7 +873,6 @@ function TrialRoutineEnd(trials) {
            psychoJS.experiment.addData("rt_" + num.toString(), t)
            i= i + 1
         }
-    }
     
     routineTimer.reset();
     
@@ -819,6 +884,9 @@ function TrialRoutineEnd(trials) {
   };
 }
 
+
+var _key_resp_diff_allKeys;
+var DifficultyComponents;
 function DifficultyRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'Difficulty'-------
@@ -845,6 +913,7 @@ function DifficultyRoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function DifficultyRoutineEachFrame(trials) {
   return function () {
@@ -958,6 +1027,7 @@ function DifficultyRoutineEachFrame(trials) {
   };
 }
 
+
 function DifficultyRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'Difficulty'-------
@@ -980,6 +1050,9 @@ function DifficultyRoutineEnd(trials) {
   };
 }
 
+
+var modify;
+var StrategyComponents;
 function StrategyRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'Strategy'-------
@@ -1005,6 +1078,8 @@ function StrategyRoutineBegin(trials) {
   };
 }
 
+
+var textAdd;
 function StrategyRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'Strategy'-------
@@ -1088,6 +1163,7 @@ function StrategyRoutineEachFrame(trials) {
   };
 }
 
+
 function StrategyRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'Strategy'-------
@@ -1105,6 +1181,8 @@ function StrategyRoutineEnd(trials) {
   };
 }
 
+
+var EndComponents;
 function EndRoutineBegin(trials) {
   return function () {
     //------Prepare to start Routine 'End'-------
@@ -1124,6 +1202,7 @@ function EndRoutineBegin(trials) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function EndRoutineEachFrame(trials) {
   return function () {
@@ -1173,6 +1252,7 @@ function EndRoutineEachFrame(trials) {
   };
 }
 
+
 function EndRoutineEnd(trials) {
   return function () {
     //------Ending Routine 'End'-------
@@ -1184,6 +1264,7 @@ function EndRoutineEnd(trials) {
     return Scheduler.Event.NEXT;
   };
 }
+
 
 function endLoopIteration(thisScheduler, loop) {
   // ------Prepare for next entry------
@@ -1207,12 +1288,14 @@ function endLoopIteration(thisScheduler, loop) {
   };
 }
 
+
 function importConditions(trials) {
   return function () {
     psychoJS.importAttributes(trials.getCurrentTrial());
     return Scheduler.Event.NEXT;
     };
 }
+
 
 function quitPsychoJS(message, isCompleted) {
   // Check for and save orphaned data
