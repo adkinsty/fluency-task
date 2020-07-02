@@ -556,23 +556,33 @@ function TrialRoutineBegin(trials) {
     routineTimer.add(11.000000);
     // update component parameters for each repeat
     letter_text.setText(Category);
+    
     event.clearEvents();
+    
     TrialClock.reset();
+    
     textFill = "";
     list_text1.setText("");
     list_text1.pos = [(- 0.6), 0.15];
+    
     list_text2.setText("");
     list_text2.pos = [(- 0.3), 0.15];
+    
     list_text3.setText("");
     list_text3.pos = [0, 0.15];
+    
     list_text4.setText("");
     list_text4.pos = [0.3, 0.15];
+    
     list_text5.setText("");
     list_text5.pos = [0.6, 0.15];
+    
     textController = [list_text1, list_text2, list_text3, list_text4, list_text5];
     textIndex = 0;
     entryCount = 0;
+    
     words_rt = [];
+    
     letter_text.bold = true;
     
     // keep track of which components have finished
@@ -754,8 +764,8 @@ function TrialRoutineEachFrame(trials) {
       list_text5.setAutoDraw(false);
     }
     timerText= Math.round(routineTimer.getTime()).toString() 
-    
     keys = psychoJS.eventManager.getKeys();
+    t = trialClock.getTime();
     if (keys.indexOf('escape') > -1) {
         psychoJS.experiment.experimentEnded = true;
     } else {
@@ -776,6 +786,7 @@ function TrialRoutineEachFrame(trials) {
                 }
             }
             screen_text.setText(textFill);
+            
             if ((keys[0] === "return")) {
                 let column = textController[textIndex];
                 let column_text = ((column.text + "\n") + screen_text.text);
