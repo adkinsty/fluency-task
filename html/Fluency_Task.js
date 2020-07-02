@@ -1272,9 +1272,9 @@ function endLoopIteration(thisScheduler, loop) {
       // ------Check if user ended loop early------
       if (loop.finished) {
         // Check for and save orphaned data
-        if (psychoJS.experiment.isEntryEmpty()) {
-          psychoJS.experiment.nextEntry(loop);
-        }
+      if (Object.keys(psychoJS.experiment._thisEntry).length > 0) {
+        psychoJS.experiment.nextEntry();
+      }
       thisScheduler.stop();
       } else {
         const thisTrial = loop.getCurrentTrial();
