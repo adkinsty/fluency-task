@@ -40,6 +40,9 @@ psychoJS.scheduleCondition(function() { return (psychoJS.gui.dialogComponent.but
 // flowScheduler gets run if the participants presses OK
 flowScheduler.add(updateInfo); // add timeStamp
 flowScheduler.add(experimentInit);
+flowScheduler.add(ConsentRoutineBegin());
+flowScheduler.add(ConsentRoutineEachFrame());
+flowScheduler.add(ConsentRoutineEnd());
 const instructions_loopLoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(instructions_loopLoopBegin, instructions_loopLoopScheduler);
 flowScheduler.add(instructions_loopLoopScheduler);
@@ -84,6 +87,8 @@ function updateInfo() {
 }
 
 
+var ConsentClock;
+var Consent_image;
 var InstructionsClock;
 var instructions;
 var spacebar0;
@@ -118,6 +123,17 @@ var thank_you;
 var globalClock;
 var routineTimer;
 function experimentInit() {
+  // Initialize components for Routine "Consent"
+  ConsentClock = new util.Clock();
+  Consent_image = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'Consent_image', units : 'pix', 
+    image : 'Consent.png', mask : undefined,
+    ori : 0, pos : [0, 0], size : [1280, 720],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : 0.0 
+  });
   // Initialize components for Routine "Instructions"
   InstructionsClock = new util.Clock();
   instructions = new visual.ImageStim({
@@ -357,6 +373,102 @@ function experimentInit() {
 }
 
 
+var t;
+var frameN;
+var ConsentComponents;
+function ConsentRoutineBegin(trials) {
+  return function () {
+    //------Prepare to start Routine 'Consent'-------
+    t = 0;
+    ConsentClock.reset(); // clock
+    frameN = -1;
+    // update component parameters for each repeat
+    // keep track of which components have finished
+    ConsentComponents = [];
+    ConsentComponents.push(Consent_image);
+    
+    for (const thisComponent of ConsentComponents)
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+var keys;
+var continueRoutine;
+function ConsentRoutineEachFrame(trials) {
+  return function () {
+    //------Loop for each frame of Routine 'Consent'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = ConsentClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *Consent_image* updates
+    if (t >= 0.0 && Consent_image.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      Consent_image.tStart = t;  // (not accounting for frame time here)
+      Consent_image.frameNStart = frameN;  // exact frame index
+      
+      Consent_image.setAutoDraw(true);
+    }
+
+    keys = psychoJS.eventManager.getKeys();
+    if (keys.indexOf('escape') > -1) {
+        psychoJS.experiment.experimentEnded = true;
+    } else {
+        if (keys) {
+            if ((keys[0] === "return")) {
+                continueRoutine = false;
+            }
+        }
+    }
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    for (const thisComponent of ConsentComponents)
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+        break;
+      }
+    
+    // refresh the screen if continuing
+    if (continueRoutine) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function ConsentRoutineEnd(trials) {
+  return function () {
+    //------Ending Routine 'Consent'-------
+    for (const thisComponent of ConsentComponents) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    }
+    // the Routine "Consent" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
 var instructions_loop;
 var currentLoop;
 function instructions_loopLoopBegin(thisScheduler) {
@@ -432,8 +544,6 @@ function trialsLoopEnd() {
 }
 
 
-var t;
-var frameN;
 var _spacebar0_allKeys;
 var InstructionsComponents;
 function InstructionsRoutineBegin(trials) {
@@ -461,7 +571,6 @@ function InstructionsRoutineBegin(trials) {
 }
 
 
-var continueRoutine;
 function InstructionsRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'Instructions'-------
@@ -615,7 +724,6 @@ function TrialRoutineBegin(trials) {
 
 var frameRemains;
 var timerText;
-var keys;
 function TrialRoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'Trial'-------
@@ -1303,6 +1411,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   
