@@ -1234,6 +1234,7 @@ function StrategyRoutineEachFrame(trials) {
         textAdd = "."; // Add a period
     } else if (textAdd === 'backspace') {
         text.text = text.text.slice(0, -1);
+        textAdd = undefined;
     } else if (['lshift', 'rshift'].includes(textAdd)) {
         modify = true;
     } else if (textAdd !== undefined) {
