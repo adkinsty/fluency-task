@@ -571,7 +571,7 @@
         <Param name="Begin Routine" updates="constant" val="# make sure no previous keypresses are used in the word&amp;#10;event.clearEvents()&amp;#10;&amp;#10;import string&amp;#10;allLetters = list(string.ascii_lowercase) #makes a list of alphabet characters&amp;#10;&amp;#10;modify = False&amp;#10;text.text = ''&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="keys = event.getKeys()&amp;#10;if len(keys):&amp;#10;    if 'space' in keys:&amp;#10;        text.text = text.text + ' '&amp;#10;    elif 'backspace' in keys:&amp;#10;        text.text = text.text[:-1]&amp;#10;    elif 'comma' in keys:&amp;#10;        text.text =  text.text + ','&amp;#10;    elif 'period' in keys:&amp;#10;        text.text = text.text + '.'&amp;#10;    elif 'lshift' in keys or 'rshift' in keys:&amp;#10;        modify = True&amp;#10;    elif 'return' in keys:&amp;#10;        continueRoutine = False&amp;#10;    elif 'escape' in keys:&amp;#10;        core.quit()  # So you can quit&amp;#10;    else:&amp;#10;        if modify:&amp;#10;            text.text = text.text + keys[0].upper()&amp;#10;            modify = False&amp;#10;        else:&amp;#10;            text.text = text.text + keys[0]" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="let theseKeys = psychoJS.eventManager.getKeys();&amp;#10;if (theseKeys.length &gt; 0) {  // at least one key was pressed&amp;#10;  textAdd = theseKeys[theseKeys.length-1]; &amp;#10;  }&amp;#10;&amp;#10;if (textAdd === 'return') {&amp;#10;    textAdd = '';  // Add nothing&amp;#10;    continueRoutine = false; // End routine&amp;#10;} else if (textAdd === 'space') {&amp;#10;    textAdd = ' ';  // Add a space&amp;#10;} else if (textAdd === 'apostrophe') {&amp;#10;    textAdd = &quot;'&quot;; // Add an apostophe&amp;#10;} else if (textAdd === 'slash') {&amp;#10;    textAdd = &quot;/&quot;; // Add a slash&amp;#10;} else if (textAdd === 'comma') {&amp;#10;    textAdd = &quot;,&quot;; // Add a comma&amp;#10;} else if (textAdd === 'period') {&amp;#10;    textAdd = &quot;.&quot;; // Add a period&amp;#10;} else if (textAdd === 'backspace') {&amp;#10;    text.text = text.text.slice(0, -1);&amp;#10;} else if (['lshift', 'rshift'].includes(textAdd)) {&amp;#10;    modify = true;&amp;#10;} else if (textAdd !== undefined) {&amp;#10;    if (modify) {&amp;#10;        text.text = text.text + textAdd.toUpperCase();&amp;#10;        modify = false;&amp;#10;     } else {&amp;#10;        text.text = text.text + textAdd&amp;#10;     }&amp;#10;      textAdd = undefined;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="let theseKeys = psychoJS.eventManager.getKeys();&amp;#10;if (theseKeys.length &gt; 0) {  // at least one key was pressed&amp;#10;  textAdd = theseKeys[theseKeys.length-1]; &amp;#10;  }&amp;#10;&amp;#10;if (textAdd === 'return') {&amp;#10;    textAdd = '';  // Add nothing&amp;#10;    continueRoutine = false; // End routine&amp;#10;} else if (textAdd === 'space') {&amp;#10;    textAdd = ' ';  // Add a space&amp;#10;} else if (textAdd === 'apostrophe') {&amp;#10;    textAdd = &quot;'&quot;; // Add an apostophe&amp;#10;} else if (textAdd === 'slash') {&amp;#10;    textAdd = &quot;/&quot;; // Add a slash&amp;#10;} else if (textAdd === 'comma') {&amp;#10;    textAdd = &quot;,&quot;; // Add a comma&amp;#10;} else if (textAdd === 'period') {&amp;#10;    textAdd = &quot;.&quot;; // Add a period&amp;#10;} else if (textAdd === 'backspace') {&amp;#10;    text.text = text.text.slice(0, -1);&amp;#10;    textAdd = undefined;&amp;#10;} else if (['lshift', 'rshift'].includes(textAdd)) {&amp;#10;    modify = true;&amp;#10;} else if (textAdd !== undefined) {&amp;#10;    if (modify) {&amp;#10;        text.text = text.text + textAdd.toUpperCase();&amp;#10;        modify = false;&amp;#10;     } else {&amp;#10;        text.text = text.text + textAdd&amp;#10;     }&amp;#10;      textAdd = undefined;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="psychoJS.experiment.addData(&quot;Strategy_resp&quot;, text.text);&amp;#10;" valType="extendedCode"/>
@@ -580,7 +580,7 @@
         <Param name="name" updates="None" val="code_2" valType="code"/>
       </CodeComponent>
     </Routine>
-    <Routine name="Consent">
+    <Routine name="Consent_2">
       <ImageComponent name="Consent_image">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -622,9 +622,67 @@
         <Param name="name" updates="None" val="code" valType="code"/>
       </CodeComponent>
     </Routine>
+    <Routine name="Consent_1">
+      <ImageComponent name="consent_2">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="set every repeat" val="$CONS" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="consent_2" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(1280, 720)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+      </ImageComponent>
+      <KeyboardComponent name="consent_resp">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="consent_resp" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
   </Routines>
   <Flow>
-    <Routine name="Consent"/>
+    <LoopInitiator loopType="TrialHandler" name="consent_loop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('CONS', 'Consent1.png')]), OrderedDict([('CONS', 'Consent2.png')]), OrderedDict([('CONS', 'Consent3.png')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="consent.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="False" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="consent_loop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="Consent_1"/>
+    <LoopTerminator name="consent_loop"/>
+    <Routine name="Consent_2"/>
     <LoopInitiator loopType="TrialHandler" name="instructions_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('INS', 'Slide1.png'), ('KEYS', ['space'])]), OrderedDict([('INS', 'Consent.png'), ('KEYS', ['y', 'n'])]), OrderedDict([('INS', 'Slide2.png'), ('KEYS', ['space'])]), OrderedDict([('INS', 'Slide3.png'), ('KEYS', ['space'])]), OrderedDict([('INS', 'Slide4.png'), ('KEYS', ['space'])]), OrderedDict([('INS', 'Slide5.png'), ('KEYS', ['space'])]), OrderedDict([('INS', 'Slide6.png'), ('KEYS', ['g'])])]" valType="str"/>

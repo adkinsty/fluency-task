@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.2),
-    on Fri Jul  3 11:03:34 2020
+    on Mon Jul  6 12:01:24 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -80,8 +80,20 @@ else:
 # create a default keyboard (e.g. to check for escape)
 defaultKeyboard = keyboard.Keyboard()
 
-# Initialize components for Routine "Consent"
-ConsentClock = core.Clock()
+# Initialize components for Routine "Consent_1"
+Consent_1Clock = core.Clock()
+consent_2 = visual.ImageStim(
+    win=win,
+    name='consent_2', units='pix', 
+    image='sin', mask=None,
+    ori=0, pos=(0, 0), size=(1280, 720),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=0.0)
+consent_resp = keyboard.Keyboard()
+
+# Initialize components for Routine "Consent_2"
+Consent_2Clock = core.Clock()
 Consent_image = visual.ImageStim(
     win=win,
     name='Consent_image', units='pix', 
@@ -249,12 +261,121 @@ thank_you = visual.TextStim(win=win, name='thank_you',
 globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
 
-# ------Prepare to start Routine "Consent"-------
+# set up handler to look after randomisation of conditions etc
+consent_loop = data.TrialHandler(nReps=1, method='sequential', 
+    extraInfo=expInfo, originPath=-1,
+    trialList=data.importConditions('consent.xlsx'),
+    seed=None, name='consent_loop')
+thisExp.addLoop(consent_loop)  # add the loop to the experiment
+thisConsent_loop = consent_loop.trialList[0]  # so we can initialise stimuli with some values
+# abbreviate parameter names if possible (e.g. rgb = thisConsent_loop.rgb)
+if thisConsent_loop != None:
+    for paramName in thisConsent_loop:
+        exec('{} = thisConsent_loop[paramName]'.format(paramName))
+
+for thisConsent_loop in consent_loop:
+    currentLoop = consent_loop
+    # abbreviate parameter names if possible (e.g. rgb = thisConsent_loop.rgb)
+    if thisConsent_loop != None:
+        for paramName in thisConsent_loop:
+            exec('{} = thisConsent_loop[paramName]'.format(paramName))
+    
+    # ------Prepare to start Routine "Consent_1"-------
+    continueRoutine = True
+    # update component parameters for each repeat
+    consent_2.setImage(CONS)
+    consent_resp.keys = []
+    consent_resp.rt = []
+    _consent_resp_allKeys = []
+    # keep track of which components have finished
+    Consent_1Components = [consent_2, consent_resp]
+    for thisComponent in Consent_1Components:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Consent_1Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    
+    # -------Run Routine "Consent_1"-------
+    while continueRoutine:
+        # get current time
+        t = Consent_1Clock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Consent_1Clock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *consent_2* updates
+        if consent_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            consent_2.frameNStart = frameN  # exact frame index
+            consent_2.tStart = t  # local t and not account for scr refresh
+            consent_2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(consent_2, 'tStartRefresh')  # time at next scr refresh
+            consent_2.setAutoDraw(True)
+        
+        # *consent_resp* updates
+        waitOnFlip = False
+        if consent_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            consent_resp.frameNStart = frameN  # exact frame index
+            consent_resp.tStart = t  # local t and not account for scr refresh
+            consent_resp.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(consent_resp, 'tStartRefresh')  # time at next scr refresh
+            consent_resp.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(consent_resp.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(consent_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if consent_resp.status == STARTED and not waitOnFlip:
+            theseKeys = consent_resp.getKeys(keyList=['space'], waitRelease=False)
+            _consent_resp_allKeys.extend(theseKeys)
+            if len(_consent_resp_allKeys):
+                consent_resp.keys = _consent_resp_allKeys[-1].name  # just the last key pressed
+                consent_resp.rt = _consent_resp_allKeys[-1].rt
+                # a response ends the routine
+                continueRoutine = False
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in Consent_1Components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "Consent_1"-------
+    for thisComponent in Consent_1Components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    consent_loop.addData('consent_2.started', consent_2.tStartRefresh)
+    consent_loop.addData('consent_2.stopped', consent_2.tStopRefresh)
+    # the Routine "Consent_1" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+# completed 1 repeats of 'consent_loop'
+
+
+# ------Prepare to start Routine "Consent_2"-------
 continueRoutine = True
 # update component parameters for each repeat
 # keep track of which components have finished
-ConsentComponents = [Consent_image]
-for thisComponent in ConsentComponents:
+Consent_2Components = [Consent_image]
+for thisComponent in Consent_2Components:
     thisComponent.tStart = None
     thisComponent.tStop = None
     thisComponent.tStartRefresh = None
@@ -264,14 +385,14 @@ for thisComponent in ConsentComponents:
 # reset timers
 t = 0
 _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-ConsentClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+Consent_2Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
 frameN = -1
 
-# -------Run Routine "Consent"-------
+# -------Run Routine "Consent_2"-------
 while continueRoutine:
     # get current time
-    t = ConsentClock.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=ConsentClock)
+    t = Consent_2Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Consent_2Clock)
     tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
@@ -299,7 +420,7 @@ while continueRoutine:
     if not continueRoutine:  # a component has requested a forced-end of Routine
         break
     continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in ConsentComponents:
+    for thisComponent in Consent_2Components:
         if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
             continueRoutine = True
             break  # at least one component has not yet finished
@@ -308,11 +429,11 @@ while continueRoutine:
     if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
         win.flip()
 
-# -------Ending Routine "Consent"-------
-for thisComponent in ConsentComponents:
+# -------Ending Routine "Consent_2"-------
+for thisComponent in Consent_2Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-# the Routine "Consent" was not non-slip safe, so reset the non-slip timer
+# the Routine "Consent_2" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
