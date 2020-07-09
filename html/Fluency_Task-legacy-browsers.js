@@ -80,7 +80,7 @@ function updateInfo() {
 
   // add info from the URL:
   util.addInfoFromUrl(expInfo);
-  psychoJS.setRedirectUrls('https://www.surveymonkey.com/r/BVGP2P7', '');
+  psychoJS.setRedirectUrls('https://app.prolific.co/submissions/complete?cc=50F0A567', '');
 
   return Scheduler.Event.NEXT;
 }
