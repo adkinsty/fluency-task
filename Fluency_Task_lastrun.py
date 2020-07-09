@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.2),
-    on Thu Jul  9 16:09:14 2020
+    on Thu Jul  9 17:10:15 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -97,7 +97,7 @@ Consent_2Clock = core.Clock()
 consent_image_2 = visual.ImageStim(
     win=win,
     name='consent_image_2', units='pix', 
-    image='Consent4.png', mask=None,
+    image='Consent5.png', mask=None,
     ori=0, pos=(0, 0), size=(1280,720),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,

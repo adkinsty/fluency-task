@@ -166,7 +166,7 @@ function experimentInit() {
   consent_image_2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'consent_image_2', units : 'pix', 
-    image : 'Consent4.png', mask : undefined,
+    image : 'Consent5.png', mask : undefined,
     ori : 0, pos : [0, 0], size : [1280, 720],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
