@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.2),
-    on Thu Jul  9 15:43:32 2020
+    on Thu Jul  9 16:09:14 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -37,7 +37,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '2020.1.2'
 expName = 'Word Fluency Task'  # from the Builder filename that created this script
-expInfo = {'participant': '', 'session': '001'}
+expInfo = {'Prolific_ID': '', 'session': '001'}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -46,7 +46,7 @@ expInfo['expName'] = expName
 expInfo['psychopyVersion'] = psychopyVersion
 
 # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
-filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])
+filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['Prolific_ID'], expName, expInfo['date'])
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
@@ -82,22 +82,22 @@ defaultKeyboard = keyboard.Keyboard()
 
 # Initialize components for Routine "Consent_1"
 Consent_1Clock = core.Clock()
-consent_2 = visual.ImageStim(
+consent_image_1 = visual.ImageStim(
     win=win,
-    name='consent_2', units='pix', 
+    name='consent_image_1', units='pix', 
     image='sin', mask=None,
     ori=0, pos=(0, 0), size=(1280, 720),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
-consent_resp = keyboard.Keyboard()
+consent_resp_1 = keyboard.Keyboard()
 
 # Initialize components for Routine "Consent_2"
 Consent_2Clock = core.Clock()
-Consent_image = visual.ImageStim(
+consent_image_2 = visual.ImageStim(
     win=win,
-    name='Consent_image', units='pix', 
-    image='Consent.png', mask=None,
+    name='consent_image_2', units='pix', 
+    image='Consent4.png', mask=None,
     ori=0, pos=(0, 0), size=(1280,720),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
@@ -105,15 +105,15 @@ Consent_image = visual.ImageStim(
 
 # Initialize components for Routine "Instructions"
 InstructionsClock = core.Clock()
-instructions = visual.ImageStim(
+instructions_image_1 = visual.ImageStim(
     win=win,
-    name='instructions', units='pix', 
+    name='instructions_image_1', units='pix', 
     image='sin', mask=None,
     ori=0, pos=(0, 0), size=(1280,720),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=512, interpolate=True, depth=0.0)
-spacebar0 = keyboard.Keyboard()
+instructions_resp_1 = keyboard.Keyboard()
 
 # Initialize components for Routine "Instructions_2"
 Instructions_2Clock = core.Clock()
@@ -320,12 +320,12 @@ for thisConsent_loop in consent_loop:
     # ------Prepare to start Routine "Consent_1"-------
     continueRoutine = True
     # update component parameters for each repeat
-    consent_2.setImage(CONS)
-    consent_resp.keys = []
-    consent_resp.rt = []
-    _consent_resp_allKeys = []
+    consent_image_1.setImage(CONS)
+    consent_resp_1.keys = []
+    consent_resp_1.rt = []
+    _consent_resp_1_allKeys = []
     # keep track of which components have finished
-    Consent_1Components = [consent_2, consent_resp]
+    Consent_1Components = [consent_image_1, consent_resp_1]
     for thisComponent in Consent_1Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -348,34 +348,34 @@ for thisConsent_loop in consent_loop:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *consent_2* updates
-        if consent_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *consent_image_1* updates
+        if consent_image_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            consent_2.frameNStart = frameN  # exact frame index
-            consent_2.tStart = t  # local t and not account for scr refresh
-            consent_2.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(consent_2, 'tStartRefresh')  # time at next scr refresh
-            consent_2.setAutoDraw(True)
+            consent_image_1.frameNStart = frameN  # exact frame index
+            consent_image_1.tStart = t  # local t and not account for scr refresh
+            consent_image_1.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(consent_image_1, 'tStartRefresh')  # time at next scr refresh
+            consent_image_1.setAutoDraw(True)
         
-        # *consent_resp* updates
+        # *consent_resp_1* updates
         waitOnFlip = False
-        if consent_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        if consent_resp_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            consent_resp.frameNStart = frameN  # exact frame index
-            consent_resp.tStart = t  # local t and not account for scr refresh
-            consent_resp.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(consent_resp, 'tStartRefresh')  # time at next scr refresh
-            consent_resp.status = STARTED
+            consent_resp_1.frameNStart = frameN  # exact frame index
+            consent_resp_1.tStart = t  # local t and not account for scr refresh
+            consent_resp_1.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(consent_resp_1, 'tStartRefresh')  # time at next scr refresh
+            consent_resp_1.status = STARTED
             # keyboard checking is just starting
             waitOnFlip = True
-            win.callOnFlip(consent_resp.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(consent_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
-        if consent_resp.status == STARTED and not waitOnFlip:
-            theseKeys = consent_resp.getKeys(keyList=['space'], waitRelease=False)
-            _consent_resp_allKeys.extend(theseKeys)
-            if len(_consent_resp_allKeys):
-                consent_resp.keys = _consent_resp_allKeys[-1].name  # just the last key pressed
-                consent_resp.rt = _consent_resp_allKeys[-1].rt
+            win.callOnFlip(consent_resp_1.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(consent_resp_1.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if consent_resp_1.status == STARTED and not waitOnFlip:
+            theseKeys = consent_resp_1.getKeys(keyList=['space'], waitRelease=False)
+            _consent_resp_1_allKeys.extend(theseKeys)
+            if len(_consent_resp_1_allKeys):
+                consent_resp_1.keys = _consent_resp_1_allKeys[-1].name  # just the last key pressed
+                consent_resp_1.rt = _consent_resp_1_allKeys[-1].rt
                 # a response ends the routine
                 continueRoutine = False
         
@@ -400,8 +400,8 @@ for thisConsent_loop in consent_loop:
     for thisComponent in Consent_1Components:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    consent_loop.addData('consent_2.started', consent_2.tStartRefresh)
-    consent_loop.addData('consent_2.stopped', consent_2.tStopRefresh)
+    consent_loop.addData('consent_image_1.started', consent_image_1.tStartRefresh)
+    consent_loop.addData('consent_image_1.stopped', consent_image_1.tStopRefresh)
     # the Routine "Consent_1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
 # completed 1 repeats of 'consent_loop'
@@ -411,7 +411,7 @@ for thisConsent_loop in consent_loop:
 continueRoutine = True
 # update component parameters for each repeat
 # keep track of which components have finished
-Consent_2Components = [Consent_image]
+Consent_2Components = [consent_image_2]
 for thisComponent in Consent_2Components:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -434,14 +434,14 @@ while continueRoutine:
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
-    # *Consent_image* updates
-    if Consent_image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # *consent_image_2* updates
+    if consent_image_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        Consent_image.frameNStart = frameN  # exact frame index
-        Consent_image.tStart = t  # local t and not account for scr refresh
-        Consent_image.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(Consent_image, 'tStartRefresh')  # time at next scr refresh
-        Consent_image.setAutoDraw(True)
+        consent_image_2.frameNStart = frameN  # exact frame index
+        consent_image_2.tStart = t  # local t and not account for scr refresh
+        consent_image_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(consent_image_2, 'tStartRefresh')  # time at next scr refresh
+        consent_image_2.setAutoDraw(True)
     keys = event.getKeys()
     if len(keys):
         if 'escape' in keys:
@@ -495,12 +495,12 @@ for thisInstructions_loop in instructions_loop:
     # ------Prepare to start Routine "Instructions"-------
     continueRoutine = True
     # update component parameters for each repeat
-    instructions.setImage(INS)
-    spacebar0.keys = []
-    spacebar0.rt = []
-    _spacebar0_allKeys = []
+    instructions_image_1.setImage(INS)
+    instructions_resp_1.keys = []
+    instructions_resp_1.rt = []
+    _instructions_resp_1_allKeys = []
     # keep track of which components have finished
-    InstructionsComponents = [instructions, spacebar0]
+    InstructionsComponents = [instructions_image_1, instructions_resp_1]
     for thisComponent in InstructionsComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -523,34 +523,34 @@ for thisInstructions_loop in instructions_loop:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *instructions* updates
-        if instructions.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *instructions_image_1* updates
+        if instructions_image_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            instructions.frameNStart = frameN  # exact frame index
-            instructions.tStart = t  # local t and not account for scr refresh
-            instructions.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(instructions, 'tStartRefresh')  # time at next scr refresh
-            instructions.setAutoDraw(True)
+            instructions_image_1.frameNStart = frameN  # exact frame index
+            instructions_image_1.tStart = t  # local t and not account for scr refresh
+            instructions_image_1.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(instructions_image_1, 'tStartRefresh')  # time at next scr refresh
+            instructions_image_1.setAutoDraw(True)
         
-        # *spacebar0* updates
+        # *instructions_resp_1* updates
         waitOnFlip = False
-        if spacebar0.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        if instructions_resp_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            spacebar0.frameNStart = frameN  # exact frame index
-            spacebar0.tStart = t  # local t and not account for scr refresh
-            spacebar0.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(spacebar0, 'tStartRefresh')  # time at next scr refresh
-            spacebar0.status = STARTED
+            instructions_resp_1.frameNStart = frameN  # exact frame index
+            instructions_resp_1.tStart = t  # local t and not account for scr refresh
+            instructions_resp_1.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(instructions_resp_1, 'tStartRefresh')  # time at next scr refresh
+            instructions_resp_1.status = STARTED
             # keyboard checking is just starting
             waitOnFlip = True
-            win.callOnFlip(spacebar0.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(spacebar0.clearEvents, eventType='keyboard')  # clear events on next screen flip
-        if spacebar0.status == STARTED and not waitOnFlip:
-            theseKeys = spacebar0.getKeys(keyList=['space', 'y', 'g'], waitRelease=False)
-            _spacebar0_allKeys.extend(theseKeys)
-            if len(_spacebar0_allKeys):
-                spacebar0.keys = _spacebar0_allKeys[-1].name  # just the last key pressed
-                spacebar0.rt = _spacebar0_allKeys[-1].rt
+            win.callOnFlip(instructions_resp_1.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(instructions_resp_1.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if instructions_resp_1.status == STARTED and not waitOnFlip:
+            theseKeys = instructions_resp_1.getKeys(keyList=['space'], waitRelease=False)
+            _instructions_resp_1_allKeys.extend(theseKeys)
+            if len(_instructions_resp_1_allKeys):
+                instructions_resp_1.keys = _instructions_resp_1_allKeys[-1].name  # just the last key pressed
+                instructions_resp_1.rt = _instructions_resp_1_allKeys[-1].rt
                 # a response ends the routine
                 continueRoutine = False
         
@@ -575,8 +575,8 @@ for thisInstructions_loop in instructions_loop:
     for thisComponent in InstructionsComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    instructions_loop.addData('instructions.started', instructions.tStartRefresh)
-    instructions_loop.addData('instructions.stopped', instructions.tStopRefresh)
+    instructions_loop.addData('instructions_image_1.started', instructions_image_1.tStartRefresh)
+    instructions_loop.addData('instructions_image_1.stopped', instructions_image_1.tStopRefresh)
     # the Routine "Instructions" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
 # completed 1 repeats of 'instructions_loop'
