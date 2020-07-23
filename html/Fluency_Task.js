@@ -25,7 +25,7 @@ psychoJS.openWindow({
 
 // store info about the experiment session:
 let expName = 'Fluency_Task';  // from the Builder filename that created this script
-let expInfo = {'Prolific_ID': '', 'session': '001'};
+let expInfo = {'MTURK_ID': '', 'session': '001'};
 
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
@@ -166,7 +166,7 @@ function experimentInit() {
   consent_image_2 = new visual.ImageStim({
     win : psychoJS.window,
     name : 'consent_image_2', units : 'pix', 
-    image : 'Consent5.png', mask : undefined,
+    image : 'Consent4.png', mask : undefined,
     ori : 0, pos : [0, 0], size : [1280, 720],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,

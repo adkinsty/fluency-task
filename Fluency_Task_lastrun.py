@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.2),
-    on Thu Jul  9 17:10:15 2020
+    on Thu Jul 23 11:48:27 2020
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -37,7 +37,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '2020.1.2'
 expName = 'Word Fluency Task'  # from the Builder filename that created this script
-expInfo = {'Prolific_ID': '', 'session': '001'}
+expInfo = {'MTURK_ID': '', 'session': '001'}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -46,7 +46,7 @@ expInfo['expName'] = expName
 expInfo['psychopyVersion'] = psychopyVersion
 
 # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
-filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['Prolific_ID'], expName, expInfo['date'])
+filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['MTURK_ID'], expName, expInfo['date'])
 
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
@@ -97,7 +97,7 @@ Consent_2Clock = core.Clock()
 consent_image_2 = visual.ImageStim(
     win=win,
     name='consent_image_2', units='pix', 
-    image='Consent5.png', mask=None,
+    image='Consent4.png', mask=None,
     ori=0, pos=(0, 0), size=(1280,720),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
@@ -577,6 +577,14 @@ for thisInstructions_loop in instructions_loop:
             thisComponent.setAutoDraw(False)
     instructions_loop.addData('instructions_image_1.started', instructions_image_1.tStartRefresh)
     instructions_loop.addData('instructions_image_1.stopped', instructions_image_1.tStopRefresh)
+    # check responses
+    if instructions_resp_1.keys in ['', [], None]:  # No response was made
+        instructions_resp_1.keys = None
+    instructions_loop.addData('instructions_resp_1.keys',instructions_resp_1.keys)
+    if instructions_resp_1.keys != None:  # we had a response
+        instructions_loop.addData('instructions_resp_1.rt', instructions_resp_1.rt)
+    instructions_loop.addData('instructions_resp_1.started', instructions_resp_1.tStartRefresh)
+    instructions_loop.addData('instructions_resp_1.stopped', instructions_resp_1.tStopRefresh)
     # the Routine "Instructions" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
 # completed 1 repeats of 'instructions_loop'
@@ -635,7 +643,7 @@ while continueRoutine:
         win.callOnFlip(key_resp_instructions_2.clock.reset)  # t=0 on next screen flip
         win.callOnFlip(key_resp_instructions_2.clearEvents, eventType='keyboard')  # clear events on next screen flip
     if key_resp_instructions_2.status == STARTED and not waitOnFlip:
-        theseKeys = key_resp_instructions_2.getKeys(keyList=['g'], waitRelease=False)
+        theseKeys = key_resp_instructions_2.getKeys(keyList=['1', '2', '3', '4'], waitRelease=False)
         _key_resp_instructions_2_allKeys.extend(theseKeys)
         if len(_key_resp_instructions_2_allKeys):
             key_resp_instructions_2.keys = _key_resp_instructions_2_allKeys[-1].name  # just the last key pressed
