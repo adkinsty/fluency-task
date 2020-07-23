@@ -72,7 +72,7 @@
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
-        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
@@ -786,7 +786,7 @@
         <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
       <KeyboardComponent name="key_resp_instructions_2">
-        <Param name="allowedKeys" updates="constant" val="'g'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'1', '2', '3', '4'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>

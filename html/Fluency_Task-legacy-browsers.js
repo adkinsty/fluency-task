@@ -876,6 +876,13 @@ function InstructionsRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     });
+    psychoJS.experiment.addData('instructions_resp_1.keys', instructions_resp_1.keys);
+    if (typeof instructions_resp_1.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('instructions_resp_1.rt', instructions_resp_1.rt);
+        routineTimer.reset();
+        }
+    
+    instructions_resp_1.stop();
     // the Routine "Instructions" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -943,7 +950,7 @@ function Instructions_2RoutineEachFrame(trials) {
     }
 
     if (key_resp_instructions_2.status === PsychoJS.Status.STARTED) {
-      let theseKeys = key_resp_instructions_2.getKeys({keyList: ['g'], waitRelease: false});
+      let theseKeys = key_resp_instructions_2.getKeys({keyList: ['1', '2', '3', '4'], waitRelease: false});
       _key_resp_instructions_2_allKeys = _key_resp_instructions_2_allKeys.concat(theseKeys);
       if (_key_resp_instructions_2_allKeys.length > 0) {
         key_resp_instructions_2.keys = _key_resp_instructions_2_allKeys[_key_resp_instructions_2_allKeys.length - 1].name;  // just the last key pressed
