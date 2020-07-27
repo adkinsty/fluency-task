@@ -1,0 +1,17 @@
+consent_loop.thisRepN,consent_loop.thisTrialN,consent_loop.thisN,consent_loop.thisIndex,consent_loop.ran,CONS,MTURK_ID,session,date,expName,psychopyVersion,OS,frameRate,instructions_resp_1.keys,instructions_resp_1.rt,instructions_loop.thisRepN,instructions_loop.thisTrialN,instructions_loop.thisN,instructions_loop.thisIndex,instructions_loop.ran,INS,key_resp_instructions_2.keys,key_resp_instructions_2.rt,key_resp_diff.keys,key_resp_diff.rt,Strategy_resp,key_resp.keys,key_resp.rt,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,trials.ran,Category,Type,LET,word1,rt_1,rt_2,rt_3,rt_4,rt_5,rt_6,rt_7,rt_8,rt_9,rt_10,rt_11,rt_12,rt_13,rt_14,rt_15,rt_16,rt_17
+0,0,0,0,1,Consent1.png,A3QEQYJWCR38O6,001,2020-07-27_17h49.10.606,Fluency_Task,2020.1.2,Win32,60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+0,1,1,1,1,Consent2.png,A3QEQYJWCR38O6,001,2020-07-27_17h49.10.606,Fluency_Task,2020.1.2,Win32,60,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,A3QEQYJWCR38O6,001,2020-07-27_17h49.10.606,Fluency_Task,2020.1.2,Win32,60,space,7.009815,0,0,0,0,1,Instructions1.png,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,A3QEQYJWCR38O6,001,2020-07-27_17h49.10.606,Fluency_Task,2020.1.2,Win32,60,space,1.076465,0,1,1,1,1,Instructions2.png,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,A3QEQYJWCR38O6,001,2020-07-27_17h49.10.606,Fluency_Task,2020.1.2,Win32,60,space,1.701695,0,2,2,2,1,Instructions3.png,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,A3QEQYJWCR38O6,001,2020-07-27_17h49.10.606,Fluency_Task,2020.1.2,Win32,60,space,1.78667,0,3,3,3,1,Instructions4.png,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,A3QEQYJWCR38O6,001,2020-07-27_17h49.10.606,Fluency_Task,2020.1.2,Win32,60,space,1.874425,0,4,4,4,1,Instructions5.png,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,A3QEQYJWCR38O6,001,2020-07-27_17h49.10.606,Fluency_Task,2020.1.2,Win32,60,,,,,,,,,1,217.13598,2,9.881835,"foods ,books",p,4.47449,0,0,0,5,1,Words that start with S,Phonemic,p,,,,,,,,,,,,,,,,,,
+,,,,,,A3QEQYJWCR38O6,001,2020-07-27_17h49.10.606,Fluency_Task,2020.1.2,Win32,60,,,,,,,,,,,3,5.645565,,j,3.129435,0,1,1,8,1,Sports,Semantic,j,sports,86,85,85,84,77,75,74,74,63,62,62,34,34,34,32,31,30
+,,,,,,A3QEQYJWCR38O6,001,2020-07-27_17h49.10.606,Fluency_Task,2020.1.2,Win32,60,,,,,,,,,,,4,5.50206,,j,1.96629,0,2,2,2,1,Things in a Hotel Lobby,Spatial,j,,86,85,85,85,69,17,16,,,,,,,,,,
+,,,,,,A3QEQYJWCR38O6,001,2020-07-27_17h49.10.606,Fluency_Task,2020.1.2,Win32,60,,,,,,,,,,,7,5.35206,,p,1.750905,0,3,3,7,1,Occupations,Semantic,p,occupations,74,73,73,72,8,8,8,,,,,,,,,,
+,,,,,,A3QEQYJWCR38O6,001,2020-07-27_17h49.10.606,Fluency_Task,2020.1.2,Win32,60,,,,,,,,,,,1,6.328505,,j,1.943475,0,4,4,6,1,Animals,Semantic,j,animals,82,82,81,81,81,72,71,71,4,4,4,3,,,,,
+,,,,,,A3QEQYJWCR38O6,001,2020-07-27_17h49.10.606,Fluency_Task,2020.1.2,Win32,60,,,,,,,,,,,2,3.160165,,p,2.177705,0,5,5,3,1,Words that start with F,Phonemic,p,f,84,,,,,,,,,,,,,,,,
+,,,,,,A3QEQYJWCR38O6,001,2020-07-27_17h49.10.606,Fluency_Task,2020.1.2,Win32,60,,,,,,,,,,,5,3.571475,,j,1.932735,0,6,6,4,1,Words that start with A,Phonemic,j,a,83,,,,,,,,,,,,,,,,
+,,,,,,A3QEQYJWCR38O6,001,2020-07-27_17h49.10.606,Fluency_Task,2020.1.2,Win32,60,,,,,,,,,,,6,5.470945,,j,5.275555,0,7,7,0,1,Things in a Garage,Spatial,j,,,,,,,,,,,,,,,,,,
+,,,,,,A3QEQYJWCR38O6,001,2020-07-27_17h49.10.606,Fluency_Task,2020.1.2,Win32,60,,,,,,,,,,,3,6.680915,"colours,dress",p,1.727265,0,8,8,1,1,Things in a Restaurant,Spatial,p,,,,,,,,,,,,,,,,,,
