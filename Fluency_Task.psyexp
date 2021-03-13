@@ -78,6 +78,23 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <CodeComponent name="JS_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="thisExp=psychoJS.experiment;&amp;#10;win=psychoJS.window;&amp;#10;event=psychoJS.eventManager;&amp;#10;Array.prototype.append = [].push;&amp;#10;shuffle = util.shuffle;&amp;#10;TrialClock = new util.Clock();" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="JS_code" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="Trial">
       <TextComponent name="fixation">
@@ -322,7 +339,7 @@
       </TextComponent>
       <CodeComponent name="displayText">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="thisExp=psychoJS.experiment;&amp;#10;win=psychoJS.window;&amp;#10;event=psychoJS.eventManager;&amp;#10;Array.prototype.append = [].push;&amp;#10;shuffle = util.shuffle;&amp;#10;TrialClock = new util.Clock();" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="import string&amp;#10;allLetters = list(string.ascii_lowercase) #makes a list of alphabet characters&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="&amp;#10;allLetters = &quot;abcdefghijklmnopqrstuvwxyz&quot;.split('');&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="&amp;#10;event.clearEvents();&amp;#10;&amp;#10;TrialClock.reset();&amp;#10;&amp;#10;textFill = &quot;&quot;;&amp;#10;list_text1.setText(&quot;&quot;);&amp;#10;list_text1.pos = [(- 0.6), 0.15];&amp;#10;&amp;#10;list_text2.setText(&quot;&quot;);&amp;#10;list_text2.pos = [(- 0.3), 0.15];&amp;#10;&amp;#10;list_text3.setText(&quot;&quot;);&amp;#10;list_text3.pos = [0, 0.15];&amp;#10;&amp;#10;list_text4.setText(&quot;&quot;);&amp;#10;list_text4.pos = [0.3, 0.15];&amp;#10;&amp;#10;list_text5.setText(&quot;&quot;);&amp;#10;list_text5.pos = [0.6, 0.15];&amp;#10;&amp;#10;textController = [list_text1, list_text2, list_text3, list_text4, list_text5];&amp;#10;textIndex = 0;&amp;#10;entryCount = 0;&amp;#10;&amp;#10;words_rt = [];&amp;#10;&amp;#10;letter_text.bold = true;&amp;#10;" valType="extendedCode"/>

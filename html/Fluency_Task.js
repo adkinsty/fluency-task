@@ -31,6 +31,12 @@ let expName = 'Fluency_Task';  // from the Builder filename that created this sc
 let expInfo = {'MTURK_ID': '', 'session': '001'};
 
 // Start code blocks for 'Before Experiment'
+thisExp=psychoJS.experiment;
+win=psychoJS.window;
+event=psychoJS.eventManager;
+Array.prototype.append = [].push;
+shuffle = util.shuffle;
+TrialClock = new util.Clock();
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
   dictionary: expInfo,
@@ -93,6 +99,10 @@ function updateInfo() {
 var InstructionsClock;
 var instructions_image_1;
 var instructions_resp_1;
+var thisExp;
+var win;
+var event;
+var shuffle;
 var TrialClock;
 var fixation;
 var timer;
@@ -128,6 +138,12 @@ function experimentInit() {
   });
   instructions_resp_1 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
+  thisExp=psychoJS.experiment;
+  win=psychoJS.window;
+  event=psychoJS.eventManager;
+  Array.prototype.append = [].push;
+  shuffle = util.shuffle;
+  TrialClock = new util.Clock();
   // Initialize components for Routine "Trial"
   TrialClock = new util.Clock();
   fixation = new visual.TextStim({
@@ -1088,6 +1104,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   
