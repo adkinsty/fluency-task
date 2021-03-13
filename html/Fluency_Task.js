@@ -48,9 +48,6 @@ const instructions_loopLoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(instructions_loopLoopBegin, instructions_loopLoopScheduler);
 flowScheduler.add(instructions_loopLoopScheduler);
 flowScheduler.add(instructions_loopLoopEnd);
-flowScheduler.add(Instructions_2RoutineBegin());
-flowScheduler.add(Instructions_2RoutineEachFrame());
-flowScheduler.add(Instructions_2RoutineEnd());
 const trialsLoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(trialsLoopBegin, trialsLoopScheduler);
 flowScheduler.add(trialsLoopScheduler);
@@ -96,9 +93,6 @@ function updateInfo() {
 var InstructionsClock;
 var instructions_image_1;
 var instructions_resp_1;
-var Instructions_2Clock;
-var instructions_image_2;
-var key_resp_instructions_2;
 var TrialClock;
 var fixation;
 var timer;
@@ -133,19 +127,6 @@ function experimentInit() {
     texRes : 512, interpolate : true, depth : 0.0 
   });
   instructions_resp_1 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
-  
-  // Initialize components for Routine "Instructions_2"
-  Instructions_2Clock = new util.Clock();
-  instructions_image_2 = new visual.ImageStim({
-    win : psychoJS.window,
-    name : 'instructions_image_2', units : 'pix', 
-    image : 'Instructions5.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : [1280, 720],
-    color : new util.Color([1, 1, 1]), opacity : 1,
-    flipHoriz : false, flipVert : false,
-    texRes : 512, interpolate : true, depth : 0.0 
-  });
-  key_resp_instructions_2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "Trial"
   TrialClock = new util.Clock();
@@ -506,139 +487,6 @@ function InstructionsRoutineEnd(snapshot) {
     
     instructions_resp_1.stop();
     // the Routine "Instructions" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
-    
-    return Scheduler.Event.NEXT;
-  };
-}
-
-
-var _key_resp_instructions_2_allKeys;
-var Instructions_2Components;
-function Instructions_2RoutineBegin(snapshot) {
-  return function () {
-    //------Prepare to start Routine 'Instructions_2'-------
-    t = 0;
-    Instructions_2Clock.reset(); // clock
-    frameN = -1;
-    continueRoutine = true; // until we're told otherwise
-    // update component parameters for each repeat
-    key_resp_instructions_2.keys = undefined;
-    key_resp_instructions_2.rt = undefined;
-    _key_resp_instructions_2_allKeys = [];
-    // keep track of which components have finished
-    Instructions_2Components = [];
-    Instructions_2Components.push(instructions_image_2);
-    Instructions_2Components.push(key_resp_instructions_2);
-    
-    for (const thisComponent of Instructions_2Components)
-      if ('status' in thisComponent)
-        thisComponent.status = PsychoJS.Status.NOT_STARTED;
-    return Scheduler.Event.NEXT;
-  }
-}
-
-
-function Instructions_2RoutineEachFrame(snapshot) {
-  return function () {
-    //------Loop for each frame of Routine 'Instructions_2'-------
-    // get current time
-    t = Instructions_2Clock.getTime();
-    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
-    // update/draw components on each frame
-    
-    // *instructions_image_2* updates
-    if (t >= 0.0 && instructions_image_2.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      instructions_image_2.tStart = t;  // (not accounting for frame time here)
-      instructions_image_2.frameNStart = frameN;  // exact frame index
-      
-      instructions_image_2.setAutoDraw(true);
-    }
-
-    
-    // *key_resp_instructions_2* updates
-    if (t >= 0.0 && key_resp_instructions_2.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      key_resp_instructions_2.tStart = t;  // (not accounting for frame time here)
-      key_resp_instructions_2.frameNStart = frameN;  // exact frame index
-      
-      // keyboard checking is just starting
-      key_resp_instructions_2.clock.reset();
-      key_resp_instructions_2.start();
-      key_resp_instructions_2.clearEvents();
-    }
-
-    if (key_resp_instructions_2.status === PsychoJS.Status.STARTED) {
-      let theseKeys = key_resp_instructions_2.getKeys({keyList: [1, 2, 3, 4], waitRelease: false});
-      _key_resp_instructions_2_allKeys = _key_resp_instructions_2_allKeys.concat(theseKeys);
-      if (_key_resp_instructions_2_allKeys.length > 0) {
-        key_resp_instructions_2.keys = _key_resp_instructions_2_allKeys[_key_resp_instructions_2_allKeys.length - 1].name;  // just the last key pressed
-        key_resp_instructions_2.rt = _key_resp_instructions_2_allKeys[_key_resp_instructions_2_allKeys.length - 1].rt;
-        // was this correct?
-        if (key_resp_instructions_2.keys == '3') {
-            key_resp_instructions_2.corr = 1;
-        } else {
-            key_resp_instructions_2.corr = 0;
-        }
-        // a response ends the routine
-        continueRoutine = false;
-      }
-    }
-    
-    // check for quit (typically the Esc key)
-    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
-      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
-    }
-    
-    // check if the Routine should terminate
-    if (!continueRoutine) {  // a component has requested a forced-end of Routine
-      return Scheduler.Event.NEXT;
-    }
-    
-    continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of Instructions_2Components)
-      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
-        continueRoutine = true;
-        break;
-      }
-    
-    // refresh the screen if continuing
-    if (continueRoutine) {
-      return Scheduler.Event.FLIP_REPEAT;
-    } else {
-      return Scheduler.Event.NEXT;
-    }
-  };
-}
-
-
-function Instructions_2RoutineEnd(snapshot) {
-  return function () {
-    //------Ending Routine 'Instructions_2'-------
-    for (const thisComponent of Instructions_2Components) {
-      if (typeof thisComponent.setAutoDraw === 'function') {
-        thisComponent.setAutoDraw(false);
-      }
-    }
-    // was no response the correct answer?!
-    if (key_resp_instructions_2.keys === undefined) {
-      if (['None','none',undefined].includes('3')) {
-         key_resp_instructions_2.corr = 1;  // correct non-response
-      } else {
-         key_resp_instructions_2.corr = 0;  // failed to respond (incorrectly)
-      }
-    }
-    // store data for thisExp (ExperimentHandler)
-    psychoJS.experiment.addData('key_resp_instructions_2.keys', key_resp_instructions_2.keys);
-    psychoJS.experiment.addData('key_resp_instructions_2.corr', key_resp_instructions_2.corr);
-    if (typeof key_resp_instructions_2.keys !== 'undefined') {  // we had a response
-        psychoJS.experiment.addData('key_resp_instructions_2.rt', key_resp_instructions_2.rt);
-        routineTimer.reset();
-        }
-    
-    key_resp_instructions_2.stop();
-    // the Routine "Instructions_2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
     return Scheduler.Event.NEXT;
