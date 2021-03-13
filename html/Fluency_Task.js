@@ -564,17 +564,23 @@ function Instructions_2RoutineEachFrame(snapshot) {
       key_resp_instructions_2.frameNStart = frameN;  // exact frame index
       
       // keyboard checking is just starting
-      psychoJS.window.callOnFlip(function() { key_resp_instructions_2.clock.reset(); });  // t=0 on next screen flip
-      psychoJS.window.callOnFlip(function() { key_resp_instructions_2.start(); }); // start on screen flip
-      psychoJS.window.callOnFlip(function() { key_resp_instructions_2.clearEvents(); });
+      key_resp_instructions_2.clock.reset();
+      key_resp_instructions_2.start();
+      key_resp_instructions_2.clearEvents();
     }
 
     if (key_resp_instructions_2.status === PsychoJS.Status.STARTED) {
-      let theseKeys = key_resp_instructions_2.getKeys({keyList: ['1', '2', '3', '4'], waitRelease: false});
+      let theseKeys = key_resp_instructions_2.getKeys({keyList: [1, 2, 3, 4], waitRelease: false});
       _key_resp_instructions_2_allKeys = _key_resp_instructions_2_allKeys.concat(theseKeys);
       if (_key_resp_instructions_2_allKeys.length > 0) {
         key_resp_instructions_2.keys = _key_resp_instructions_2_allKeys[_key_resp_instructions_2_allKeys.length - 1].name;  // just the last key pressed
         key_resp_instructions_2.rt = _key_resp_instructions_2_allKeys[_key_resp_instructions_2_allKeys.length - 1].rt;
+        // was this correct?
+        if (key_resp_instructions_2.keys == '3') {
+            key_resp_instructions_2.corr = 1;
+        } else {
+            key_resp_instructions_2.corr = 0;
+        }
         // a response ends the routine
         continueRoutine = false;
       }
@@ -615,7 +621,17 @@ function Instructions_2RoutineEnd(snapshot) {
         thisComponent.setAutoDraw(false);
       }
     }
+    // was no response the correct answer?!
+    if (key_resp_instructions_2.keys === undefined) {
+      if (['None','none',undefined].includes('3')) {
+         key_resp_instructions_2.corr = 1;  // correct non-response
+      } else {
+         key_resp_instructions_2.corr = 0;  // failed to respond (incorrectly)
+      }
+    }
+    // store data for thisExp (ExperimentHandler)
     psychoJS.experiment.addData('key_resp_instructions_2.keys', key_resp_instructions_2.keys);
+    psychoJS.experiment.addData('key_resp_instructions_2.corr', key_resp_instructions_2.corr);
     if (typeof key_resp_instructions_2.keys !== 'undefined') {  // we had a response
         psychoJS.experiment.addData('key_resp_instructions_2.rt', key_resp_instructions_2.rt);
         routineTimer.reset();
