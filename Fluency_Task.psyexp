@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2020.1.2">
+<PsychoPy2experiment encoding="utf-8" version="2020.2.10">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
     <Param name="Completed URL" updates="None" val="https://www.surveymonkey.com/r/KQBSTH2" valType="str"/>
+    <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
     <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['MTURK_ID'], expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
     <Param name="Experiment info" updates="None" val="{'MTURK_ID': '', 'session': '001'}" valType="code"/>
@@ -13,6 +14,7 @@
     <Param name="Incomplete URL" updates="None" val="" valType="str"/>
     <Param name="JS libs" updates="None" val="packaged" valType="str"/>
     <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Resources" updates="None" val="[]" valType="fileList"/>
     <Param name="Save csv file" updates="None" val="False" valType="bool"/>
     <Param name="Save excel file" updates="None" val="False" valType="bool"/>
     <Param name="Save log file" updates="None" val="True" valType="bool"/>
@@ -28,7 +30,7 @@
     <Param name="color" updates="None" val="$[0,0,0]" valType="str"/>
     <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
     <Param name="expName" updates="None" val="Word Fluency Task" valType="str"/>
-    <Param name="exportHTML" updates="None" val="manually" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Save" valType="str"/>
     <Param name="logging level" updates="None" val="exp" valType="code"/>
   </Settings>
   <Routines>
@@ -319,6 +321,8 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <CodeComponent name="displayText">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="import string&amp;#10;allLetters = list(string.ascii_lowercase) #makes a list of alphabet characters&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="&amp;#10;allLetters = &quot;abcdefghijklmnopqrstuvwxyz&quot;.split('');&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="&amp;#10;event.clearEvents();&amp;#10;&amp;#10;TrialClock.reset();&amp;#10;&amp;#10;textFill = &quot;&quot;;&amp;#10;list_text1.setText(&quot;&quot;);&amp;#10;list_text1.pos = [(- 0.6), 0.15];&amp;#10;&amp;#10;list_text2.setText(&quot;&quot;);&amp;#10;list_text2.pos = [(- 0.3), 0.15];&amp;#10;&amp;#10;list_text3.setText(&quot;&quot;);&amp;#10;list_text3.pos = [0, 0.15];&amp;#10;&amp;#10;list_text4.setText(&quot;&quot;);&amp;#10;list_text4.pos = [0.3, 0.15];&amp;#10;&amp;#10;list_text5.setText(&quot;&quot;);&amp;#10;list_text5.pos = [0.6, 0.15];&amp;#10;&amp;#10;textController = [list_text1, list_text2, list_text3, list_text4, list_text5];&amp;#10;textIndex = 0;&amp;#10;entryCount = 0;&amp;#10;&amp;#10;words_rt = [];&amp;#10;&amp;#10;letter_text.bold = true;&amp;#10;" valType="extendedCode"/>
@@ -550,6 +554,8 @@
         <Param name="wrapWidth" updates="constant" val="1" valType="code"/>
       </TextComponent>
       <CodeComponent name="code_2">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="psychoJS.eventManager.clearEvents()&amp;#10;allLetters = &quot;abcdefghijklmnopqrstuvwxyz&quot;.split('');&amp;#10;modify = false;&amp;#10;text.text = &quot;&quot;;&amp;#10;" valType="extendedCode"/>
@@ -592,6 +598,8 @@
         <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
       <CodeComponent name="consent_code_2">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
@@ -652,6 +660,8 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
       <CodeComponent name="code_JS">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="thisExp=psychoJS.experiment;&amp;#10;win=psychoJS.window;&amp;#10;event=psychoJS.eventManager;&amp;#10;Array.prototype.append = [].push;&amp;#10;shuffle = util.shuffle;&amp;#10;TrialClock = new util.Clock();&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
@@ -767,7 +777,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="Instructions6.png" valType="str"/>
+        <Param name="image" updates="constant" val="Instructions5.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="instructions_image_2" valType="code"/>
@@ -782,7 +792,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="texture resolution" updates="constant" val="512" valType="code"/>
         <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
       <KeyboardComponent name="key_resp_instructions_2">
@@ -806,23 +816,9 @@
     </Routine>
   </Routines>
   <Flow>
-    <LoopInitiator loopType="TrialHandler" name="consent_loop">
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('CONS', 'Consent1.png')]), OrderedDict([('CONS', 'Consent2.png')]), OrderedDict([('CONS', 'Consent3.png')])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="consent.xlsx" valType="str"/>
-      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="False" valType="bool"/>
-      <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="code"/>
-      <Param name="name" updates="None" val="consent_loop" valType="code"/>
-      <Param name="random seed" updates="None" val="" valType="code"/>
-    </LoopInitiator>
-    <Routine name="Consent_1"/>
-    <LoopTerminator name="consent_loop"/>
-    <Routine name="Consent_2"/>
     <LoopInitiator loopType="TrialHandler" name="instructions_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('INS', 'Instructions1.png')]), OrderedDict([('INS', 'Instructions2.png')]), OrderedDict([('INS', 'Instructions3.png')]), OrderedDict([('INS', 'Instructions4.png')]), OrderedDict([('INS', 'Instructions5.png')])]" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('INS', 'Instructions1.png')]), OrderedDict([('INS', 'Instructions2.png')]), OrderedDict([('INS', 'Instructions3.png')]), OrderedDict([('INS', 'Instructions4.png')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="instructions.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
@@ -836,8 +832,8 @@
     <Routine name="Instructions_2"/>
     <LoopInitiator loopType="TrialHandler" name="trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('Category', 'Things in a Garage'), ('Type', 'Spatial'), ('LET', 'j')]), OrderedDict([('Category', 'Things in a Restaurant'), ('Type', 'Spatial'), ('LET', 'p')]), OrderedDict([('Category', 'Things in a Hotel Lobby'), ('Type', 'Spatial'), ('LET', 'j')]), OrderedDict([('Category', 'Words that start with F'), ('Type', 'Phonemic'), ('LET', 'p')]), OrderedDict([('Category', 'Words that start with A'), ('Type', 'Phonemic'), ('LET', 'j')]), OrderedDict([('Category', 'Words that start with S'), ('Type', 'Phonemic'), ('LET', 'p')]), OrderedDict([('Category', 'Animals'), ('Type', 'Semantic'), ('LET', 'j')]), OrderedDict([('Category', 'Occupations'), ('Type', 'Semantic'), ('LET', 'p')]), OrderedDict([('Category', 'Sports'), ('Type', 'Semantic'), ('LET', 'j')])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="conditions.xlsx" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('Category', 'Words that start with A'), ('Type', 'Phonemic'), ('LET', 'j')]), OrderedDict([('Category', 'Words that start with S'), ('Type', 'Phonemic'), ('LET', 'p')]), OrderedDict([('Category', 'Animals'), ('Type', 'Semantic'), ('LET', 'j')]), OrderedDict([('Category', 'Occupations'), ('Type', 'Semantic'), ('LET', 'p')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="condition.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
@@ -846,8 +842,6 @@
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="Trial"/>
-    <Routine name="Difficulty"/>
-    <Routine name="Strategy"/>
     <Routine name="Catch"/>
     <LoopTerminator name="trials"/>
     <Routine name="End"/>
