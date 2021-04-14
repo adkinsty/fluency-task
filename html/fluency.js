@@ -1,14 +1,14 @@
-﻿/********************* 
- * Fluency_Task Test *
- *********************/
+﻿/**************** 
+ * Fluency Test *
+ ****************/
 
-import { PsychoJS } from './lib/core-2020.2.js';
-import * as core from './lib/core-2020.2.js';
-import { TrialHandler } from './lib/data-2020.2.js';
-import { Scheduler } from './lib/util-2020.2.js';
-import * as visual from './lib/visual-2020.2.js';
-import * as sound from './lib/sound-2020.2.js';
-import * as util from './lib/util-2020.2.js';
+import { PsychoJS } from './lib/core-2021.1.2.js';
+import * as core from './lib/core-2021.1.2.js';
+import { TrialHandler } from './lib/data-2021.1.2.js';
+import { Scheduler } from './lib/util-2021.1.2.js';
+import * as visual from './lib/visual-2021.1.2.js';
+import * as sound from './lib/sound-2021.1.2.js';
+import * as util from './lib/util-2021.1.2.js';
 //some handy aliases as in the psychopy scripts;
 const { abs, sin, cos, PI: pi, sqrt } = Math;
 const { round } = util;
@@ -27,8 +27,8 @@ psychoJS.openWindow({
 });
 
 // store info about the experiment session:
-let expName = 'Fluency_Task';  // from the Builder filename that created this script
-let expInfo = {'MTURK_ID': '', 'session': '001'};
+let expName = 'fluency';  // from the Builder filename that created this script
+let expInfo = {'participant': ''};
 
 // Start code blocks for 'Before Experiment'
 thisExp=psychoJS.experiment;
@@ -71,14 +71,14 @@ psychoJS.start({
   expInfo: expInfo,
   });
 
-psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.EXP);
+psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.DEBUG);
 
 
 var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
-  expInfo['psychopyVersion'] = '2020.2.10';
+  expInfo['psychopyVersion'] = '2021.1.2';
   expInfo['OS'] = window.navigator.platform;
 
   // store frame rate of monitor if we can measure it successfully
@@ -160,7 +160,7 @@ function experimentInit() {
   timer = new visual.TextStim({
     win: psychoJS.window,
     name: 'timer',
-    text: 'default text',
+    text: '',
     font: 'Arial',
     units: undefined, 
     pos: [(- 0.7), 0.4], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -182,7 +182,7 @@ function experimentInit() {
   letter_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'letter_text',
-    text: 'default text',
+    text: '',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.28], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -275,7 +275,7 @@ function experimentInit() {
   text_3 = new visual.TextStim({
     win: psychoJS.window,
     name: 'text_3',
-    text: 'default text',
+    text: '',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -597,7 +597,7 @@ function TrialRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((fixation.status === PsychoJS.Status.STARTED || fixation.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+    if (fixation.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       fixation.setAutoDraw(false);
     }
     
@@ -611,7 +611,7 @@ function TrialRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((timer.status === PsychoJS.Status.STARTED || timer.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+    if (timer.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       timer.setAutoDraw(false);
     }
     
@@ -629,7 +629,7 @@ function TrialRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((instruct_text.status === PsychoJS.Status.STARTED || instruct_text.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+    if (instruct_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       instruct_text.setAutoDraw(false);
     }
     
@@ -643,7 +643,7 @@ function TrialRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((letter_text.status === PsychoJS.Status.STARTED || letter_text.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+    if (letter_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       letter_text.setAutoDraw(false);
     }
     
@@ -657,7 +657,7 @@ function TrialRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((screen_text.status === PsychoJS.Status.STARTED || screen_text.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+    if (screen_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       screen_text.setAutoDraw(false);
     }
     
@@ -671,7 +671,7 @@ function TrialRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((list_text1.status === PsychoJS.Status.STARTED || list_text1.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+    if (list_text1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text1.setAutoDraw(false);
     }
     
@@ -685,7 +685,7 @@ function TrialRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((list_text2.status === PsychoJS.Status.STARTED || list_text2.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+    if (list_text2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text2.setAutoDraw(false);
     }
     
@@ -699,7 +699,7 @@ function TrialRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((list_text3.status === PsychoJS.Status.STARTED || list_text3.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+    if (list_text3.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text3.setAutoDraw(false);
     }
     
@@ -713,7 +713,7 @@ function TrialRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((list_text4.status === PsychoJS.Status.STARTED || list_text4.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+    if (list_text4.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text4.setAutoDraw(false);
     }
     
@@ -727,7 +727,7 @@ function TrialRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 1 + 90 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((list_text5.status === PsychoJS.Status.STARTED || list_text5.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+    if (list_text5.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       list_text5.setAutoDraw(false);
     }
     timerText= Math.round(routineTimer.getTime()).toString() 
@@ -1025,7 +1025,7 @@ function EndRoutineEachFrame(snapshot) {
     }
 
     frameRemains = 0 + 3 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if ((thank_you.status === PsychoJS.Status.STARTED || thank_you.status === PsychoJS.Status.FINISHED) && t >= frameRemains) {
+    if (thank_you.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       thank_you.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
@@ -1104,12 +1104,6 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
-  
-  
-  
-  
-  
-  
   
   
   
